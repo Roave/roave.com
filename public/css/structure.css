@@ -1,0 +1,9 @@
+.logo {
+
+}
+
+.logo.small {
+	background-image: url('../images/logo-small.png');
+	width: 333px;
+	height: 125px;
+}

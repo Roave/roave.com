@@ -1,0 +1,16 @@
+{
+	"name": "mediatechdesigns/roave-web",
+	"description": "Roave.com",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Justin Martin",
+			"email": "justin@mediatechdesigns.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {
+		"twitter/bootstrap": "@dev",
+		"zendframework/zendframework": "@stable"
+	}
+}
