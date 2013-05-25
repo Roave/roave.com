@@ -10,7 +10,10 @@
 	],
 	"minimum-stability": "dev",
 	"require": {
-		"twitter/bootstrap": "@dev",
-		"zendframework/zendframework": "@stable"
+		"twitter/bootstrap": "@stable",
+		"zendframework/zendframework": "@stable",
+		"rwoverdijk/assetmanager": "@stable",
+		"leafo/lessphp": "@stable",
+		"twig/twig": "@stable"
 	}
 }

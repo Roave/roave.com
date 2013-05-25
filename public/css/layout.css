@@ -1,10 +1,6 @@
 body {
-	background-image: url("roavebg.jpg");
 	padding-bottom: 40px;
 	padding-top: 50px;
-	/* CUSTOMIZE THE CAROUSEL;
-	-------------------------------------------------- */
-	/* Carousel base class */
 }
 .carousel {
 	margin-bottom: 40px;
@@ -49,9 +45,6 @@ body {
 }
 .carousel-caption .btn {
 	margin-top: 10px;
-	/* MARKETING CONTENT;
-	-------------------------------------------------- */
-	/* Center align the text within the three columns below the carousel */
 }
 .marketing .span4 {
 	text-align: center;
