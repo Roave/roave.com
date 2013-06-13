@@ -1,1 +1,49 @@
 @import "bootstrap.less";
+
+.zce-logo-size(@scale: 1) {
+    height: floor((68px * @scale));
+    width: floor((73px * @scale));
+}
+
+.zce5-3-logo {
+    background: url('http://www.zend.com/topics/zce-php5-3-logo.gif') no-repeat;
+    .background-size(auto 100%);
+    .zce-logo-size;
+}
+
+.zce5-logo {
+    background: url('http://www.zend.com/topics/php5-zce-logo-new.gif') no-repeat;
+    .background-size(auto 100%);
+    .zce-logo-size;
+}
+
+.zfce-logo {
+    background: url('http://www.zend.com/topics/zf-zce-logo.gif') no-repeat;
+    .background-size(auto 100%);
+    .zce-logo-size;
+}
+
+.team .member {
+    .clearfix;
+    .photo {
+        float: left;
+        .certs {
+            width: 180px;
+            margin: -30px auto 0;
+            text-align: center;
+            min-height: 70px;
+            div {
+                display: inline-block;
+                margin-bottom: 2px;
+                .zce-logo-size(0.7);
+            }
+            div:hover {
+                .zce-logo-size(0.9);
+            }
+
+        }
+        > img {
+            .img-polaroid;
+        }
+    }
+}
