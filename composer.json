@@ -1,19 +1,18 @@
 {
-	"name": "mediatechdesigns/roave-web",
-	"description": "Roave.com",
-	"license": "proprietary",
-	"authors": [
-		{
-			"name": "Justin Martin",
-			"email": "justin@mediatechdesigns.com"
-		}
-	],
-	"minimum-stability": "dev",
-	"require": {
-		"twitter/bootstrap": "@stable",
-		"zendframework/zendframework": "@stable",
-		"rwoverdijk/assetmanager": "@stable",
-		"leafo/lessphp": "@stable",
-		"twig/twig": "@stable"
-	}
+    "name": "mediatechdesigns/roave-web",
+    "description": "Roave.com",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Justin Martin",
+            "email": "justin@mediatechdesigns.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "twitter/bootstrap": "2.*",
+        "zendframework/zendframework": "2.*",
+        "rwoverdijk/assetmanager": "1.*",
+        "zf-commons/zfc-twig": "1.*"
+    }
 }

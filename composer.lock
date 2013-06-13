@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "01cd2eafa8274ece0fe49d4b832c2305",
+    "hash": "bf6154557f76c4ece5f93cda09dd12fc",
     "packages": [
         {
             "name": "kriswallsmith/assetic",
-            "version": "dev-master",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "c24f69222dc837625715a6fa902a3e2fa4fb5038"
+                "reference": "dfcbf3d19bafa0f00549bc10dba0ca19c8b3185b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/c24f69222dc837625715a6fa902a3e2fa4fb5038",
-                "reference": "c24f69222dc837625715a6fa902a3e2fa4fb5038",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/dfcbf3d19bafa0f00549bc10dba0ca19c8b3185b",
+                "reference": "dfcbf3d19bafa0f00549bc10dba0ca19c8b3185b",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -74,65 +74,24 @@
                 "compression",
                 "minification"
             ],
-            "time": "2013-05-22 17:17:41"
-        },
-        {
-            "name": "leafo/lessphp",
-            "version": "v0.3.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/leafo/lessphp.git",
-                "reference": "v0.3.9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/leafo/lessphp/zipball/v0.3.9",
-                "reference": "v0.3.9",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.3-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "lessc.inc.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT",
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Leaf Corcoran",
-                    "email": "leafot@gmail.com",
-                    "homepage": "http://leafo.net"
-                }
-            ],
-            "description": "lessphp is a compiler for LESS written in PHP.",
-            "homepage": "http://leafo.net/lessphp/",
-            "time": "2013-03-02 16:13:31"
+            "time": "2013-06-06 22:11:45"
         },
         {
             "name": "rwoverdijk/assetmanager",
-            "version": "1.2.6",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RWOverdijk/AssetManager",
-                "reference": "1.2.6"
+                "url": "https://github.com/RWOverdijk/AssetManager.git",
+                "reference": "1.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/RWOverdijk/AssetManager/archive/1.2.6.zip",
-                "reference": "1.2.6",
+                "url": "https://api.github.com/repos/RWOverdijk/AssetManager/zipball/1.3.1",
+                "reference": "1.3.1",
                 "shasum": ""
             },
             "require": {
-                "kriswallsmith/assetic": ">=v1.1.0-alpha1",
+                "kriswallsmith/assetic": "1.1.*",
                 "php": ">=5.3.3",
                 "zendframework/zendframework": "2.*"
             },
@@ -167,7 +126,7 @@
                 "zend framework 2",
                 "zf2"
             ],
-            "time": "2013-01-19 17:56:39"
+            "time": "2013-06-04 06:11:24"
         },
         {
             "name": "symfony/process",
@@ -218,16 +177,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.13.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "v1.13.0"
+                "reference": "6f753205834b511269a97fe35108bbd5c8d245f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/v1.13.0",
-                "reference": "v1.13.0",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/6f753205834b511269a97fe35108bbd5c8d245f5",
+                "reference": "6f753205834b511269a97fe35108bbd5c8d245f5",
                 "shasum": ""
             },
             "require": {
@@ -263,7 +222,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-05-10 15:12:43"
+            "time": "2013-06-09 06:03:21"
         },
         {
             "name": "twitter/bootstrap",
@@ -294,16 +253,16 @@
         },
         {
             "name": "zendframework/zendframework",
-            "version": "2.2.0",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zf2.git",
-                "reference": "release-2.2.0"
+                "reference": "cb09baca85cc29638f88cb3ae10afa073d197eba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zf2/zipball/release-2.2.0",
-                "reference": "release-2.2.0",
+                "url": "https://api.github.com/repos/zendframework/zf2/zipball/cb09baca85cc29638f88cb3ae10afa073d197eba",
+                "reference": "cb09baca85cc29638f88cb3ae10afa073d197eba",
                 "shasum": ""
             },
             "require": {
@@ -402,7 +361,53 @@
                 "framework",
                 "zf2"
             ],
-            "time": "2013-05-15 10:27:32"
+            "time": "2013-06-12 20:18:54"
+        },
+        {
+            "name": "zf-commons/zfc-twig",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ZF-Commons/ZfcTwig.git",
+                "reference": "1.1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ZF-Commons/ZfcTwig/zipball/1.1.3",
+                "reference": "1.1.3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "twig/twig": "1.13.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ZfcTwig\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Kyle Spraggs",
+                    "email": "theman@spiffyjr.me",
+                    "homepage": "http://www.spiffyjr.me/"
+                },
+                {
+                    "name": "Cosmin Harangus",
+                    "email": "cosmin@zendexperts.com",
+                    "homepage": "http://www.zendexperts.com/"
+                }
+            ],
+            "description": "Zend Framework 2 Module that provides a Twig rendering strategy and extensions to render actions or trigger events from your templates",
+            "homepage": "http://www.github.com/ZF-Commons/ZfcTwig/",
+            "keywords": [
+                "module",
+                "twig",
+                "zf2"
+            ],
+            "time": "2013-06-10 12:46:32"
         }
     ],
     "packages-dev": [
@@ -412,13 +417,9 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "twitter/bootstrap": 0,
-        "zendframework/zendframework": 0,
-        "rwoverdijk/assetmanager": 0,
-        "leafo/lessphp": 0,
-        "twig/twig": 0
-    },
+    "stability-flags": [
+
+    ],
     "platform": [
 
     ],

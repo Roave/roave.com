@@ -14,15 +14,16 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
-    public function indexAction() {
+    public function indexAction()
+    {
         return new ViewModel();
     }
-    
+
     public function splashAction() {
         $view = new ViewModel();
-        
+
         $view->setTerminal(true);
-        
+
         return $view;
     }
 }
