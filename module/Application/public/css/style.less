@@ -23,10 +23,28 @@
     .zce-logo-size;
 }
 
+.team > header{
+    border-bottom: 2px solid @black;
+    margin-bottom: 60px;
+}
+
 .team .member {
     .clearfix;
+    header {
+        h1,h2{
+            display: inline;
+        }
+        h1 {
+            font-size: 170%;
+        }
+        h2 {
+            margin-left: 15px;
+            font-size: 110%;
+        }
+    }
     .photo {
         float: left;
+        margin-right: 30px;
         .certs {
             width: 180px;
             margin: -30px auto 0;
@@ -46,5 +64,8 @@
         > img {
             .img-polaroid;
         }
+    }
+    + .member {
+        margin-top: 40px;
     }
 }
