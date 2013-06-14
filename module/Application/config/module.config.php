@@ -16,7 +16,7 @@ return array(
                     'route'    => '/',
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
-                        'action'     => 'splash',
+                        'action'     => 'index',
                     ),
                 ),
             ),
@@ -46,7 +46,22 @@ return array(
             ),
         ),
     ),
+    'navigation' => array(
+        'default' => array(
+            array(
+                'label' => 'Home',
+                'route' => 'home',
+            ),
+            array(
+                'label' => 'Meet the Team',
+                'route' => 'about/team',
+            ),
+        ),
+    ),
     'service_manager' => array(
+         'factories' => array(
+             'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
+         ),
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
