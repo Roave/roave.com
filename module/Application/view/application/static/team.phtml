@@ -74,36 +74,36 @@ $team = [
         <h1>Meet the Roave Team</h1>
     </header>
 
-    <? foreach($team as $member): ?>
+    <?php foreach($team as $member): ?>
     <article class="member">
         <div class="photo">
             <?=$this->gravatar($member['email'], ['img_size' => 180], ['alt' => $member['name']]); ?>
-            <? if (!empty($member['certs'])): ?>
+            <?php if (!empty($member['certs'])): ?>
             <div class="certs">
                 <a href="http://www.zend.com/en/yellow-pages#show-ClientCandidateID=<?= $member['zceid']; ?>">
-                <? foreach($member['certs'] as $cert): ?>
+                <?php foreach($member['certs'] as $cert): ?>
                     <div class="<?=$cert; ?>"></div>
-                <? endforeach; ?>
+                <?php endforeach; ?>
                 </a>
             </div>
-            <? endif; ?>
+            <?php endif; ?>
         </div>
         <header>
             <hgroup>
                 <h1><?= $member['name']; ?></h1>
                 <h2><?= $member['title']; ?></h2>
             </hgroup>
-            <? if (!empty($member['links'])): ?>
+            <?php if (!empty($member['links'])): ?>
             <div class="links">
-                <? foreach($member['links'] as $link => $url): ?>
+                <?php foreach($member['links'] as $link => $url): ?>
                     <a href="<?= $url; ?>"><?= $link;?></a>
-                <? endforeach; ?>
+                <?php endforeach; ?>
             </div>
-            <? endif; ?>
+            <?php endif; ?>
         </header>
         <p><?= $member['bio']; ?></p>
     </article>
     <hr>
-    <? endforeach; ?>
+    <?php endforeach; ?>
 
 </section>
