@@ -8,4 +8,3 @@ nbproject
 .settings
 node_modules
 composer.phar
-composer.lock
