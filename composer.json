@@ -13,6 +13,6 @@
         "zendframework/zendframework": "2.*",
         "phly/phly-simple-page": "dev-master",
         "rwoverdijk/assetmanager": "1.*",
-        "spoonx/sxbootstrap": "1.*",
+        "spoonx/sxbootstrap": "1.*"
     }
 }
