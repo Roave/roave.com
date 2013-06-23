@@ -14,6 +14,5 @@
         "phly/phly-simple-page": "dev-master",
         "rwoverdijk/assetmanager": "1.*",
         "spoonx/sxbootstrap": "1.*",
-        "zf-commons/zfc-twig": "1.*"
     }
 }
