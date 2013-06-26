@@ -1,9 +1,25 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
 @import "bootstrap.less";
 @import "responsive.less";
 @import "grayscale_filter.less";
 
+@import "zce-logos.less";
+@import "team.less";
+
+
 body {
     background-image: url('../images/bg.png');
+}
+
+body > .wrap {
+    min-height: 100%;
+    position: relative;
 }
 
 .logo.small {
@@ -24,84 +40,58 @@ body {
     margin-right: 25px;
 }
 
-body>header .navbar {
+body > .wrap > header .navbar {
     margin-top: 215px;
+    .navbar-inner {
+        margin: 0;
+    }
 }
 
-body>header {
+body > .wrap > header {
     padding-top: 10px;
     height: 400px;
     background-image: url('../images/cityscape.jpg');
     background-position: 0px -50px;
 }
 
-.zce-logo-size(@scale: 1) {
-    height: floor((68px * @scale));
-    width: floor((73px * @scale));
+body > .wrap > .container {
+    padding-bottom: 40px;
 }
 
-.zce5-3-logo {
-    background: url('http://www.zend.com/topics/zce-php5-3-logo.gif') no-repeat;
-    .background-size(auto 100%);
-    .zce-logo-size;
-}
+body > .wrap > footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
 
-.zce5-logo {
-    background: url('http://www.zend.com/topics/php5-zce-logo-new.gif') no-repeat;
-    .background-size(auto 100%);
-    .zce-logo-size;
-}
-
-.zfce-logo {
-    background: url('http://www.zend.com/topics/zf-zce-logo.gif') no-repeat;
-    .background-size(auto 100%);
-    .zce-logo-size;
-}
-
-.team > header{
-    border-bottom: 2px solid @black;
-    margin-bottom: 60px;
-}
-
-.team .member {
-    .clearfix;
-    header {
-        h1,h2{
-            display: inline;
-        }
-        h1 {
-            font-size: 170%;
-        }
-        h2 {
-            margin-left: 15px;
-            font-size: 110%;
-        }
+    .copyright {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        color: #BBB;
+        letter-spacing: 1px;
+        font-weight: bold;
+        text-shadow: 0px 1px 0px rgba(245, 245, 245, 0.9),
+            0px -1px 0px rgba(245, 245, 245, 0.9),
+            1px 0px 0px rgba(245, 245, 245, 0.9),
+            -1px 0px 0px rgba(245, 245, 245, 0.9);
     }
-    .photo {
-        float: left;
-        margin-right: 30px;
-        .certs {
-            width: 180px;
-            margin: -30px auto 0;
-            text-align: center;
-            min-height: 70px;
-            div {
-                display: inline-block;
-                margin-bottom: 2px;
-                vertical-align: top;
-                .zce-logo-size(0.7);
-                transition: all 0.5s ease;
-            }
-            div:hover {
-                .zce-logo-size(0.9);
-            }
+}
 
-        }
-        > img {
-            .img-polaroid;
-        }
+@media (max-width: 767px) {
+    body > .wrap > header {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    + .member {
-        margin-top: 40px;
+}
+
+@media (max-width: 485px) {
+    body > .wrap > header {
+        height: 260px;
+        .navbar {
+            margin-top: 70px;
+        }
     }
 }
