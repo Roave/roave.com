@@ -11,38 +11,25 @@ return array(
     'router' => array(
         'routes' => array(
             'home' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => 'Literal',
                 'options' => array(
                     'route'    => '/',
                     'defaults' => array(
-                        'controller' => 'Application\Controller\Index',
-                        'action'     => 'index',
+                        'controller' => 'PhlySimplePage\Controller\Page',
+                        'template'   => 'application/static/index',
                     ),
                 ),
             ),
-
-            'about' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+            'team' => array(
+                'type' => 'Literal',
                 'options' => array(
-                    'route'    => '/about',
+                    'route'    => '/team',
                     'defaults' => array(
                         'controller' => 'PhlySimplePage\Controller\Page',
-                        'template'   => 'application/static/about',
+                        'template'   => 'application/static/team',
                     ),
                 ),
                 'may_terminate' => true,
-                'child_routes' => array(
-                    'team' => array(
-                        'type' => 'Zend\Mvc\Router\Http\Literal',
-                        'options' => array(
-                            'route'    => '/team',
-                            'defaults' => array(
-                                'controller' => 'PhlySimplePage\Controller\Page',
-                                'template'   => 'application/static/team',
-                            ),
-                        ),
-                    ),
-                ),
             ),
         ),
     ),
@@ -54,7 +41,7 @@ return array(
             ),
             array(
                 'label' => 'Meet the Team',
-                'route' => 'about/team',
+                'route' => 'team',
             ),
         ),
     ),
@@ -62,10 +49,6 @@ return array(
          'factories' => array(
              'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
          ),
-        'abstract_factories' => array(
-            'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
-            'Zend\Log\LoggerAbstractServiceFactory',
-        ),
         'aliases' => array(
             'translator' => 'MvcTranslator',
         ),
@@ -78,11 +61,6 @@ return array(
                 'base_dir' => __DIR__ . '/../language',
                 'pattern'  => '%s.mo',
             ),
-        ),
-    ),
-    'controllers' => array(
-        'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
         ),
     ),
     'view_manager' => array(
