@@ -10,6 +10,8 @@ $team = [
         'zceid' => 'ZEND015223',
         'links' => [
             'github' => 'https://github.com/EvanDotPro',
+            'twitter' => 'https://twitter.com/EvanDotPro',
+            'rss' => 'http://blog.evan.pro/',
         ],
     ],
     [
@@ -20,6 +22,8 @@ $team = [
         'bio'   => 'Justin Martin is a PHP expert with over a decade of highly diverse PHP experience. He is recognized in the PHP community for being a <a href="http://www.php.net/manual/en/preface.php">significant contributor</a> to the official PHP manual as well as a founding member of the <a href="http://phpmentoring.org">PHP Mentoring</a> project. Justin is also our resident JavaScript and binary protocol expert. In his spare time, Justin enjoys riding motorcycles, bicycles, <a href="http://rvecafe.com/Assets5/bike01f.jpg">or anything with two wheels</a>.',
         'links' => [
             'github' => 'https://github.com/TheFrozenFire',
+            'twitter' => 'https://twitter.com/TheFrozenFire',
+            'rss' => 'http://thefrozenfire.com/',
         ],
     ],
     [
@@ -31,6 +35,8 @@ $team = [
         'zceid' => 'ZEND004767',
         'links' => [
             'github' => 'https://github.com/DASPRiD',
+            'twitter' => 'https://twitter.com/DASPRiD',
+            'rss' => 'http://www.dasprids.de/',
         ],
     ],
     [
@@ -38,9 +44,10 @@ $team = [
         'title' => 'Senior Developer',
         'email' => 'marco@roave.com',
         'bio'   => 'Marco aka Ocramius is a software developer by day, and a passionate open source software contributor, evangelist and supporter by night. He is part of the Doctrine team and an active Zend Framework 2 contributor, constantly looking for new challenges to deal with, especially when it comes to PHP.',
-        //'zceid' => 'ZEND004767',
         'links' => [
             'github' => 'https://github.com/Ocramius',
+            'twitter' => 'https://twitter.com/Ocramius',
+            'rss' => 'http://ocramius.github.io/',
         ],
     ],
     [
@@ -52,6 +59,8 @@ $team = [
         'zceid' => 'ZEND008272',
         'links' => [
             'github' => 'https://github.com/Akrabat',
+            'twitter' => 'https://twitter.com/Akrabat',
+            'rss' => 'http://akrabat.com/',
         ],
     ],
     [
@@ -116,7 +125,7 @@ $team = [
             <?php if (!empty($member['links'])): ?>
             <div class="links">
                 <?php foreach($member['links'] as $link => $url): ?>
-                    <a href="<?= $url; ?>"><?= $link;?></a>
+                    <a class="team-link" href="<?= $url; ?>"><i class="team-link-icon icon-<?= $link;?>"></i></a>
                 <?php endforeach; ?>
             </div>
             <?php endif; ?>
