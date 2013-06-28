@@ -30,6 +30,16 @@ return [
                     ],
                 ],
             ],
+            'clients' => [
+                'type' => 'Literal',
+                'options' => [
+                    'route'    => '/clients',
+                    'defaults' => [
+                        'controller' => 'PhlySimplePage\Controller\Page',
+                        'template'   => 'application/static/clients',
+                    ],
+                ],
+            ],
         ],
     ],
     'navigation' => [
@@ -41,6 +51,10 @@ return [
             [
                 'label' => 'Meet the Team',
                 'route' => 'team',
+            ],
+            [
+                'label' => 'Clients',
+                'route' => 'clients',
             ],
         ],
     ],
