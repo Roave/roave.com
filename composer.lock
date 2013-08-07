@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "0c5ba50a935a01c81875128cafdb6583",
+    "hash": "9e43b77e3fdec9da9b05486f771f3667",
     "packages": [
         {
             "name": "composer/installers",
@@ -76,6 +76,47 @@
                 "zend"
             ],
             "time": "2013-08-07 17:25:08"
+        },
+        {
+            "name": "silverstripe/blog",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-blog.git",
+                "reference": "573ad1bda8fb3ad8e3cf48fabcfa0a141a1edfa3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/573ad1bda8fb3ad8e3cf48fabcfa0a141a1edfa3",
+                "reference": "573ad1bda8fb3ad8e3cf48fabcfa0a141a1edfa3",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": ">=3.1.x-dev,<4.0"
+            },
+            "suggest": {
+                "silverstripe/comments": "Enable user comments on any page type, including blog posts",
+                "silverstripe/widgets": "Additional 'sidebar features', e.g. a list of recent posts and a tagcloud",
+                "simplepie/simplepie": "Parse RSS feeds, required for the RSS widget"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Saophalkun Ponlu",
+                    "email": "phalkunz@silverstripe.com"
+                },
+                {
+                    "name": "Carlos Barberis",
+                    "email": "carlos@silverstripe.com"
+                }
+            ],
+            "description": "The blog module allows you to post blogs on your SilverStripe. It includes the ability to post blogs using a site front-end form. Blogs are summarised on the blog holder page type, with more detail viewable when a specific blog is clicked.",
+            "keywords": [
+                "blog",
+                "silverstripe"
+            ],
+            "time": "2013-07-12 06:04:22"
         },
         {
             "name": "silverstripe/cms",
@@ -172,7 +213,43 @@
         }
     ],
     "packages-dev": [
-
+        {
+            "name": "thefrozenfire/dataobjectcruft",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TheFrozenFire/silverstripe-dataobjectcruft.git",
+                "reference": "1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TheFrozenFire/silverstripe-dataobjectcruft/zipball/1.0",
+                "reference": "1.0",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Martin",
+                    "email": "frozenfire@thefrozenfire.com",
+                    "homepage": "https://github.com/TheFrozenFire",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A tool for finding and removing tables, fields and indexes which are no longer needed in a SilverStripe database",
+            "keywords": [
+                "dev",
+                "silverstripe"
+            ],
+            "time": "2013-04-21 04:45:32"
+        }
     ],
     "aliases": [
 
@@ -180,7 +257,9 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "silverstripe/cms": 20,
-        "silverstripe/framework": 20
+        "silverstripe/framework": 20,
+        "silverstripe/blog": 20,
+        "thefrozenfire/dataobjectcruft": 20
     },
     "platform": {
         "php": ">=5.3.2"
