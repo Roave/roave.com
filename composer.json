@@ -1,0 +1,13 @@
+{
+	"name": "roave/website",
+	"description": "Roave Website",
+	"require": {
+		"php": ">=5.3.2",
+		"silverstripe/cms": "3.1.x-dev",
+		"silverstripe/framework": "3.1.x-dev"
+	},
+	"config": {
+		"process-timeout": 600	
+	},
+	"minimum-stability": "dev"
+}

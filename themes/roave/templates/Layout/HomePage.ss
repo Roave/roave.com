@@ -1,0 +1,12 @@
+<div class="jumbotron">
+    <h1>Web development and PHP experts.</h1>
+    <p class="lead">Roave is a hand-picked team of some of the most talented
+        developers in the PHP community.</p>
+    <a class="btn btn-large" href="/team">Meet the Team &raquo;</a>
+</div>
+<div class="client-logos">
+    <img src="http://static.zend.com/img/logo.gif"/>
+    <img src="https://www.southwestmedical.com/images/SWM_Logo_Full.png"/>
+    <img src="http://coursio.com/images/coursio_logo.png"/>
+    <img src="https://www.callfire.com/sites/all/themes/callfire/images/logo.png"/>
+</div>
