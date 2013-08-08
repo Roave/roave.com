@@ -5,7 +5,8 @@
 		"php": ">=5.3.2",
 		"silverstripe/cms": "3.1.x-dev",
 		"silverstripe/framework": "3.1.x-dev",
-		"silverstripe/blog": "dev-master"
+		"silverstripe/blog": "dev-master",
+		"undefinedoffset/sortablegridfield": "dev-master"
 	},
 	"require-dev": {
 		"thefrozenfire/dataobjectcruft": "dev-master"

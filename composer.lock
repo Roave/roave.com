@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "9e43b77e3fdec9da9b05486f771f3667",
+    "hash": "ef43b1f197434ac9a532ed00eb7e2849",
     "packages": [
         {
             "name": "composer/installers",
@@ -210,6 +210,43 @@
                 "silverstripe"
             ],
             "time": "2013-08-07 15:33:06"
+        },
+        {
+            "name": "undefinedoffset/sortablegridfield",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UndefinedOffset/SortableGridField.git",
+                "reference": "0.2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/0.2.0",
+                "reference": "0.2.0",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "sortablegridfield"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Ed Chipman",
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds drag and drop functionality to SilverStripe 3.0's GridField",
+            "keywords": [
+                "gridfield",
+                "silverstripe"
+            ],
+            "time": "2013-08-04 15:23:28"
         }
     ],
     "packages-dev": [
@@ -259,6 +296,7 @@
         "silverstripe/cms": 20,
         "silverstripe/framework": 20,
         "silverstripe/blog": 20,
+        "undefinedoffset/sortablegridfield": 20,
         "thefrozenfire/dataobjectcruft": 20
     },
     "platform": {

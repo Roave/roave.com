@@ -8,12 +8,20 @@ class TeamMember extends DataObject {
 		"Bio" => "HTMLText",
 		"GitHub" => "Text",
 		"Twitter" => "Text",
-		"Blog" => "Text"
+		"Blog" => "Text",
+		"Sort" => "Int"
 	);
 	
 	private static $many_many = array(
 		"Certifications" => "Certification"
 	);
+	
+	private static $summary_fields = array(
+		"Title",
+		"Email"
+	);
+	
+	private static $default_sort = "Sort ASC";
 	
 	public function getCMSFields() {
 		$fields = new FieldList(new TabSet("Root"));

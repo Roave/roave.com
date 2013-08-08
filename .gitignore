@@ -8,3 +8,5 @@ silverstripe-cache
 .idea
 .DS_Store
 vendor/
+
+cli/
