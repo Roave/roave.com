@@ -94,6 +94,8 @@ class IvrGenerator {
 		$teamMembers = TeamMember::get()->exclude(array(
 			"TollFreeExtension" => "",
 			"Phone" => ""
+		))->sort(array(
+			"TollFreeExtension" => "ASC"
 		));
 		
 		foreach($teamMembers as $teamMember) {
