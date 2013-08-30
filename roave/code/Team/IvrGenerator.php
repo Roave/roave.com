@@ -86,11 +86,6 @@ class IvrGenerator {
 		$teamDirectory = $dialplan->Menu() // Team Directory
 			->setName("team_directory");
 		
-		// Delay
-		$teamDirectory->Play()
-			->setType("tts")
-			->setContent(",,,");
-		
 		$teamMembers = TeamMember::get()->exclude(array(
 			"TollFreeExtension" => "",
 			"Phone" => ""
