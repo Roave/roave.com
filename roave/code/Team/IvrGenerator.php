@@ -100,9 +100,7 @@ class IvrGenerator {
 			$teamDirectory->Play()
 				->setType("tts")
 				->setContent("For {$teamMember->Name}, press {$teamMember->TollFreeExtension}");
-			$teamDirectory->Keypress()
-				->setPressed($teamMember->TollFreeExtension)
-				->appendChild($this->generateTransferNode($config, $dialplan)->setContent($teamMember->Phone));
+			
 		}
 		
 		if($config->IVR_Option_Humorous_SoundId) {
@@ -111,6 +109,15 @@ class IvrGenerator {
 			$teamDirectory->Play()
 				->setType("tts")
 				->setContent("For a good time, press {$humorousExtension}");
+		}
+		
+		foreach($teamMembers as $teamMember) {
+			$teamDirectory->Keypress()
+				->setPressed($teamMember->TollFreeExtension)
+				->appendChild($this->generateTransferNode($config, $dialplan)->setContent($teamMember->Phone));
+		}
+		
+		if($config->IVR_Option_Humorous_SoundId) {
 			$teamDirectory->Keypress()
 				->setPressed($humorousExtension)
 				->Play()
