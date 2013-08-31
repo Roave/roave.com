@@ -139,6 +139,11 @@ class IvrGenerator {
 			$transfer->setCallerIdAlpha($config->IVR_CallerIdAlpha);
 		}
 		
+		$teamDirectory->Keypress()
+			->setPressed("#")
+			->Goto()
+				->setContent("main_menu");
+		
 		if($config->IVR_Option_Humorous_SoundId) {
 			$teamDirectory->Keypress()
 				->setPressed($humorousExtension)
@@ -146,11 +151,6 @@ class IvrGenerator {
 					->setType("callfireid")
 					->setContent($config->IVR_Option_Humorous_SoundId);
 		}
-		
-		$teamDirectory->Keypress()
-			->setPressed("#")
-			->Goto()
-				->setContent("main_menu");
 		
 		return $teamDirectory;
 	}
