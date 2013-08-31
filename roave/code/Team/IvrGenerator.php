@@ -100,7 +100,9 @@ class IvrGenerator {
 	
 	public function generateTeamDirectory($config, $dialplan, $menu) {
 		$teamDirectory = $dialplan->Menu() // Team Directory
-			->setName("team_directory");
+			->setName("team_directory")
+			->setMaxDigits(1)
+			->setTimeout(50000);
 		
 		$teamMembers = TeamMember::get()->exclude(array(
 			"TollFreeExtension" => "",
@@ -118,7 +120,7 @@ class IvrGenerator {
 		
 		$teamDirectory->Play()
 			->setType("tts")
-			->setContent("To return to the main menu, press pound");
+			->setContent("To return to the main menu, press star");
 		
 		if($config->IVR_Option_Humorous_SoundId) {
 			$humorousExtension = $teamMembers->max("TollFreeExtension") + 1;
@@ -140,7 +142,7 @@ class IvrGenerator {
 		}
 		
 		$teamDirectory->Keypress()
-			->setPressed("#")
+			->setPressed("*")
 			->Goto()
 				->setContent("main_menu");
 		
