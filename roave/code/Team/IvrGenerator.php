@@ -148,7 +148,7 @@ class IvrGenerator {
 		}
 		
 		$teamDirectory->Keypress()
-			->setPress("#")
+			->setPressed("#")
 			->Goto()
 				->setContent("main_menu");
 		
