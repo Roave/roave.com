@@ -1,7 +1,9 @@
 <?php
 class IvrConfig extends DataExtension {
 	private static $db = array(
+		"IVR_Number" => "Varchar",
 		"IVR_CallerId" => "Varchar",
+		"IVR_CallerIdAlpha" => "Varchar",
 		"IVR_IntroSoundId" => "Int",
 		"IVR_Option_Emergency_SoundId" => "Int",
 		"IVR_Option_Emergency_Extension" => "Int",
@@ -18,8 +20,15 @@ class IvrConfig extends DataExtension {
 	);
 	
 	public function updateCMSFields(FieldList $fields) {
+		$numberList = $this->getCallFireNumbers();
+		$numbers = array();
+		if($numberList) {
+			foreach($numberList as $number) {
+				$numbers[$number->getNumber()] = "{$number->getNumber()} ({$number->getStatus()})";
+			}
+		}
+	
 		$sounds = $this->getCallFireSounds();
-		
 		$soundIds = array();
 		if($sounds) {
 			foreach($sounds as $sound) {
@@ -28,7 +37,10 @@ class IvrConfig extends DataExtension {
 		}
 		
 		$fields->addFieldsToTab("Root.RoaveNumber.Config", array(
+			DropdownField::create("IVR_Number", "Phone Number", $numbers)->setHasEmptyDefault(true),
+		
 			TextField::create("IVR_CallerId", "Caller ID"),
+			TextField::create("IVR_CallerIdAlpha", "Caller ID Alpha"),
 			DropdownField::create("IVR_IntroSoundId", "Intro Sound", $soundIds)->setHasEmptyDefault(true),
 			
 			HeaderField::create("IVR_Option_Emergency", "Emergency Support"),
@@ -89,6 +101,14 @@ class IvrConfig extends DataExtension {
 		$gist = curl_exec($curl);
 		
 		return $gist;
+	}
+	
+	protected function getCallFireNumbers() {
+		$numberClient = $this->owner->getCallFireClient('Number');
+		$response = $numberClient->QueryNumbers();
+		$numbers = $numberClient::response($response);
+		
+		return $numbers;
 	}
 	
 	protected function getCallFireSounds() {
