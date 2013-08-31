@@ -56,19 +56,31 @@ class IvrGenerator {
 		if($config->IVR_Option_Emergency_SoundId) {
 			$menu->Keypress()
 				->setPressed($config->IVR_Option_Emergency_Extension)
-				->appendChild($this->generateTransferNode($config, $dialplan)->setContent($config->IVR_Option_Emergency_Number));
+				->appendChild(
+					$transfer = $this->generateTransferNode($config, $dialplan)
+						->setContent($config->IVR_Option_Emergency_Number)
+				);
+			$transfer->setCallerId($config->IVR_CallerId);
 		}
 		
 		if($config->IVR_Option_TechnicalSupport_SoundId) {
 			$menu->Keypress()
 				->setPressed($config->IVR_Option_TechnicalSupport_Extension)
-				->appendChild($this->generateTransferNode($config, $dialplan)->setContent($config->IVR_Option_TechnicalSupport_Number));
+				->appendChild(
+					$transfer = $this->generateTransferNode($config, $dialplan)
+						->setContent($config->IVR_Option_TechnicalSupport_Number)
+				);
+			$transfer->setCallerId($config->IVR_CallerId);
 		}
 		
 		if($config->IVR_Option_Sales_SoundId) {
 			$menu->Keypress()
 				->setPressed($config->IVR_Option_Sales_Extension)
-				->appendChild($this->generateTransferNode($config, $dialplan)->setContent($config->IVR_Option_Sales_Number));
+				->appendChild(
+					$transfer = $this->generateTransferNode($config, $dialplan)
+						->setContent($config->IVR_Option_Sales_Number)
+				);
+			$transfer->setCallerId($config->IVR_CallerId);
 		}
 		
 		if($config->IVR_Option_TeamDirectory_SoundId) {
@@ -111,7 +123,11 @@ class IvrGenerator {
 		foreach($teamMembers as $teamMember) {
 			$teamDirectory->Keypress()
 				->setPressed($teamMember->TollFreeExtension)
-				->appendChild($this->generateTransferNode($config, $dialplan)->setContent($teamMember->Phone));
+				->appendChild(
+					$transfer = $this->generateTransferNode($config, $dialplan)
+						->setContent($teamMember->Phone)
+				);
+			$transfer->setCallerId($config->IVR_CallerId);
 		}
 		
 		if($config->IVR_Option_Humorous_SoundId) {
@@ -127,7 +143,7 @@ class IvrGenerator {
 	
 	public function generateTransferNode($config, $dialplan) {
 		$transfer = new Ivr\Dialplan\TransferTag;
-		$dialplan->ownerDocument->importNode($transfer);
+		$dialplan->ownerDocument->importNode($transfer, true);
 		
 		return $transfer;
 	}

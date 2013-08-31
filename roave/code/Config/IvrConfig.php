@@ -1,6 +1,7 @@
 <?php
 class IvrConfig extends DataExtension {
 	private static $db = array(
+		"IVR_CallerId" => "Varchar",
 		"IVR_IntroSoundId" => "Int",
 		"IVR_Option_Emergency_SoundId" => "Int",
 		"IVR_Option_Emergency_Extension" => "Int",
@@ -27,19 +28,30 @@ class IvrConfig extends DataExtension {
 		}
 		
 		$fields->addFieldsToTab("Root.RoaveNumber.Config", array(
+			TextField::create("IVR_CallerId", "Caller ID"),
 			DropdownField::create("IVR_IntroSoundId", "Intro Sound", $soundIds)->setHasEmptyDefault(true),
-			DropdownField::create("IVR_Option_Emergency_SoundId", "Emergency Option Sound", $soundIds)->setHasEmptyDefault(true),
-			NumericField::create("IVR_Option_Emergency_Extension", "Emergency Extension"),
-			TextField::create("IVR_Option_Emergency_Number", "Emergency Number"),
-			DropdownField::create("IVR_Option_TechnicalSupport_SoundId", "Technical Support Option Sound", $soundIds)->setHasEmptyDefault(true),
-			NumericField::create("IVR_Option_TechnicalSupport_Extension", "Technical Support Extension"),
-			TextField::create("IVR_Option_TechnicalSupport_Number", "Technical Support Number"),
-			DropdownField::create("IVR_Option_Sales_SoundId", "Sales Option Sound", $soundIds)->setHasEmptyDefault(true),
-			NumericField::create("IVR_Option_Sales_Extension", "Sales Extension"),
-			TextField::create("IVR_Option_Sales_Number", "Sales Number"),
-			DropdownField::create("IVR_Option_TeamDirectory_SoundId", "Team Directory Option Sound", $soundIds)->setHasEmptyDefault(true),
-			NumericField::create("IVR_Option_TeamDirectory_Extension", "Team Directory Extension"),
-			DropdownField::create("IVR_Option_Humorous_SoundId", "Humorous Option Sound", $soundIds)->setHasEmptyDefault(true),
+			
+			HeaderField::create("IVR_Option_Emergency", "Emergency Support"),
+			DropdownField::create("IVR_Option_Emergency_SoundId", "Sound", $soundIds)->setHasEmptyDefault(true),
+			NumericField::create("IVR_Option_Emergency_Extension", "Extension"),
+			TextField::create("IVR_Option_Emergency_Number", "Number"),
+			
+			HeaderField::create("IVR_Option_TechnicalSupport", "Technical Support"),
+			DropdownField::create("IVR_Option_TechnicalSupport_SoundId", "Sound", $soundIds)->setHasEmptyDefault(true),
+			NumericField::create("IVR_Option_TechnicalSupport_Extension", "Extension"),
+			TextField::create("IVR_Option_TechnicalSupport_Number", "Number"),
+			
+			HeaderField::create("IVR_Option_Sales", "Sales"),
+			DropdownField::create("IVR_Option_Sales_SoundId", "Sound", $soundIds)->setHasEmptyDefault(true),
+			NumericField::create("IVR_Option_Sales_Extension", "Extension"),
+			TextField::create("IVR_Option_Sales_Number", "Number"),
+			
+			HeaderField::create("IVR_Option_TeamDirectory", "Team Directory"),
+			DropdownField::create("IVR_Option_TeamDirectory_SoundId", "Sound", $soundIds)->setHasEmptyDefault(true),
+			NumericField::create("IVR_Option_TeamDirectory_Extension", "Extension"),
+			
+			HeaderField::create("IVR_Option_Humorous", "Humorous"),
+			DropdownField::create("IVR_Option_Humorous_SoundId", "Sound", $soundIds)->setHasEmptyDefault(true),
 		));
 		
 		$xml = $this->getIvrXml();
