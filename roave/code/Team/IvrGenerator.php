@@ -16,6 +16,7 @@ class IvrGenerator {
 	
 	public function generateMenu($config, $dialplan) {
 		$menu = $dialplan->Menu()
+			->setName("main_menu")
 			->setMaxDigits(1)
 			->setTimeout(50000);
 		
@@ -115,6 +116,10 @@ class IvrGenerator {
 			
 		}
 		
+		$teamDirectory->Play()
+			->setType("tts")
+			->setContent("To return to the main menu, press pound");
+		
 		if($config->IVR_Option_Humorous_SoundId) {
 			$humorousExtension = $teamMembers->max("TollFreeExtension") + 1;
 		
@@ -141,6 +146,11 @@ class IvrGenerator {
 					->setType("callfireid")
 					->setContent($config->IVR_Option_Humorous_SoundId);
 		}
+		
+		$teamDirectory->Keypress()
+			->setPress("#")
+			->Goto()
+				->setContent("main_menu");
 		
 		return $teamDirectory;
 	}

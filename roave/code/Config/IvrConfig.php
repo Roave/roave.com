@@ -78,10 +78,13 @@ class IvrConfig extends DataExtension {
 				$cache->save($gist);
 			}
 		}
+		
 		if($gist) {
 			$gist = json_decode($gist);
 			$gistEmbed = "<script src=\"{$gist->html_url}.js\"></script>";
-			$fields->addFieldToTab("Root.RoaveNumber.IVR", LiteralField::create("IVR_XML", $gistEmbed));
+			$fields->addFieldsToTab("Root.RoaveNumber.IVR", array(
+				LiteralField::create("IVR_XML", $gistEmbed)
+			));
 		}
 	}
 	
