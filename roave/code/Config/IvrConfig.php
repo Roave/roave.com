@@ -42,7 +42,41 @@ class IvrConfig extends DataExtension {
 			DropdownField::create("IVR_Option_Humorous_SoundId", "Humorous Option Sound", $soundIds)->setHasEmptyDefault(true),
 		));
 		
-		$fields->addFieldToTab("Root.RoaveNumber.IVR", TextareaField::create("IVR_XML", "IVR XML", $this->getIvrXml()));
+		$xml = $this->getIvrXml();
+		$cache = SS_Cache::factory('IVR_XML');
+		if(!($gist = $cache->load(md5($xml)))) {
+			$gist = $this->createGist(array(
+				"IVR_XML.xml" => array(
+					"content" => $xml
+				)
+			));
+			if($gist) {
+				$cache->save($gist);
+			}
+		}
+		if($gist) {
+			$gist = json_decode($gist);
+			$gistEmbed = "<script src=\"{$gist->html_url}.js\"></script>";
+			$fields->addFieldToTab("Root.RoaveNumber.IVR", LiteralField::create("IVR_XML", $gistEmbed));
+		}
+	}
+	
+	protected function createGist(array $files) {
+		$data = json_encode(array(
+			"public" => false,
+			"files" => $files
+		));
+		
+		$curl = curl_init('https://api.github.com/gists');
+		curl_setopt_array($curl, array(
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_POST => true,
+			CURLOPT_POSTFIELDS => $data
+		));
+		
+		$gist = curl_exec($curl);
+		
+		return $gist;
 	}
 	
 	protected function getCallFireSounds() {
@@ -60,7 +94,7 @@ class IvrConfig extends DataExtension {
 		
 		$xml = $ivr->saveXML();
 		
-		$doctype = '<?xml version="1.0"?>';
+		$doctype = "<?xml version=\"1.0\"?>\n";
 		
 		if(substr($xml, 0, strlen($doctype)) == $doctype) {
 			$xml = substr($xml, strlen($doctype));
