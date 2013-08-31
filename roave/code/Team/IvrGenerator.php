@@ -115,7 +115,6 @@ class IvrGenerator {
 			$teamDirectory->Play()
 				->setType("tts")
 				->setContent("For {$teamMember->Name}, press {$teamMember->TollFreeExtension}");
-			
 		}
 		
 		$teamDirectory->Play()
