@@ -1,0 +1,8 @@
+.StreamPage .main.container {
+    padding-top: 2em;
+}
+
+.StreamPage .main.container #twitch_tv + iframe {
+    width: 1000px;
+    height: 500px;
+}
