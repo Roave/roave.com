@@ -76,6 +76,7 @@ class IvrConfig extends DataExtension {
 			));
 			if($gist) {
 				$cache->save($gist);
+				sleep(1); // To allow gist propagation before display
 			}
 		}
 		
