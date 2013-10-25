@@ -3,20 +3,63 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ef43b1f197434ac9a532ed00eb7e2849",
+    "hash": "d270ea06bbd05c1bac40e966d3ca95ab",
     "packages": [
+        {
+            "name": "callfire/php-sdk",
+            "version": "dev-feature-ivr-generator",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:mediatechdesigns/callfire-api-library.git",
+                "reference": "c32a36d5ab54840239e60f3c540fbeb57dd4af99"
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.3",
+                "zendframework/zend-stdlib": "~2.2.2"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "v0.2.0",
+                "phpdocumentor/phpdocumentor": "v2.0.1",
+                "phpunit/phpunit": "~3.7.22",
+                "satooshi/php-coveralls": "~0.6",
+                "zendframework/zend-code": "~2.2.1",
+                "zendframework/zend-stdlib": "~2.2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "CallFire": "src/"
+                },
+                "classmap": [
+                    "tests/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Martin",
+                    "email": "jmartin@callfire.com"
+                }
+            ],
+            "description": "PHP SDK for integrating with the CallFire API",
+            "homepage": "http://www.callfire.com/",
+            "time": "2013-08-24 04:54:18"
+        },
         {
             "name": "composer/installers",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "v1.0.5"
+                "reference": "b3bd071ea114a57212c75aa6a2eef5cfe0cc798f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/v1.0.5",
-                "reference": "v1.0.5",
+                "url": "https://api.github.com/repos/composer/installers/zipball/b3bd071ea114a57212c75aa6a2eef5cfe0cc798f",
+                "reference": "b3bd071ea114a57212c75aa6a2eef5cfe0cc798f",
                 "shasum": ""
             },
             "replace": {
@@ -53,6 +96,7 @@
             "description": "A multi-framework Composer library installer",
             "homepage": "http://composer.github.com/installers/",
             "keywords": [
+                "TYPO3 CMS",
                 "TYPO3 Flow",
                 "TYPO3 Neos",
                 "agl",
@@ -75,7 +119,45 @@
                 "wordpress",
                 "zend"
             ],
-            "time": "2013-08-07 17:25:08"
+            "time": "2013-08-20 04:37:09"
+        },
+        {
+            "name": "roave/silverstripe-callfire",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Roave/SilverStripe-CallFire-Module.git",
+                "reference": "1b7f33a88845b17d89af34a9f51c6622a8ffd9c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Roave/SilverStripe-CallFire-Module/zipball/1b7f33a88845b17d89af34a9f51c6622a8ffd9c1",
+                "reference": "1b7f33a88845b17d89af34a9f51c6622a8ffd9c1",
+                "shasum": ""
+            },
+            "require": {
+                "callfire/php-sdk": "~1.1.0",
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Martin",
+                    "email": "frozenfire@thefrozenfire.com",
+                    "homepage": "https://github.com/TheFrozenFire",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CallFire integration for SilverStripe",
+            "keywords": [
+                "callfire",
+                "silverstripe"
+            ],
+            "time": "2013-08-30 20:31:50"
         },
         {
             "name": "silverstripe/blog",
@@ -83,16 +165,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "573ad1bda8fb3ad8e3cf48fabcfa0a141a1edfa3"
+                "reference": "0599efa46b0c73d425ccaaccea64861de36e2506"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/573ad1bda8fb3ad8e3cf48fabcfa0a141a1edfa3",
-                "reference": "573ad1bda8fb3ad8e3cf48fabcfa0a141a1edfa3",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/0599efa46b0c73d425ccaaccea64861de36e2506",
+                "reference": "0599efa46b0c73d425ccaaccea64861de36e2506",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/cms": ">=3.1.x-dev,<4.0"
+                "silverstripe/cms": "~3.1"
             },
             "suggest": {
                 "silverstripe/comments": "Enable user comments on any page type, including blog posts",
@@ -116,7 +198,7 @@
                 "blog",
                 "silverstripe"
             ],
-            "time": "2013-07-12 06:04:22"
+            "time": "2013-08-22 15:04:29"
         },
         {
             "name": "silverstripe/cms",
@@ -124,12 +206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "99ba7bdb4ed721fea66be2825fe838ac6b77a4a3"
+                "reference": "4e031076be5b58917ac74c7f17295dc32bb5de09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/99ba7bdb4ed721fea66be2825fe838ac6b77a4a3",
-                "reference": "99ba7bdb4ed721fea66be2825fe838ac6b77a4a3",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/4e031076be5b58917ac74c7f17295dc32bb5de09",
+                "reference": "4e031076be5b58917ac74c7f17295dc32bb5de09",
                 "shasum": ""
             },
             "require": {
@@ -163,7 +245,7 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2013-08-07 15:15:17"
+            "time": "2013-08-29 15:08:42"
         },
         {
             "name": "silverstripe/framework",
@@ -171,12 +253,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "c78c0aa828ab7ef25891eaa75eb318a938d9afff"
+                "reference": "5f0329c6f20a6c5330ac8f517ebe79a222a3b852"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/c78c0aa828ab7ef25891eaa75eb318a938d9afff",
-                "reference": "c78c0aa828ab7ef25891eaa75eb318a938d9afff",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/5f0329c6f20a6c5330ac8f517ebe79a222a3b852",
+                "reference": "5f0329c6f20a6c5330ac8f517ebe79a222a3b852",
                 "shasum": ""
             },
             "require": {
@@ -209,7 +291,7 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2013-08-07 15:33:06"
+            "time": "2013-08-30 08:12:50"
         },
         {
             "name": "undefinedoffset/sortablegridfield",
@@ -217,12 +299,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/SortableGridField.git",
-                "reference": "0.2.0"
+                "reference": "53eef90c978782092e40b6381aefc2bbbb1bf461"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/0.2.0",
-                "reference": "0.2.0",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/53eef90c978782092e40b6381aefc2bbbb1bf461",
+                "reference": "53eef90c978782092e40b6381aefc2bbbb1bf461",
                 "shasum": ""
             },
             "require": {
@@ -246,7 +328,50 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2013-08-04 15:23:28"
+            "time": "2013-08-24 00:19:35"
+        },
+        {
+            "name": "zendframework/zend-stdlib",
+            "version": "dev-develop",
+            "target-dir": "Zend/Stdlib",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendStdlib.git",
+                "reference": "295d125207f6ab60739f6ff996c97e6bb3eee7c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/295d125207f6ab60739f6ff996c97e6bb3eee7c7",
+                "reference": "295d125207f6ab60739f6ff996c97e6bb3eee7c7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "pecl-weakref": "Implementation of weak references for Stdlib\\CallbackHandler"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev",
+                    "dev-develop": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Stdlib\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "keywords": [
+                "stdlib",
+                "zf2"
+            ],
+            "time": "2013-08-21 17:16:25"
         }
     ],
     "packages-dev": [
@@ -256,12 +381,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TheFrozenFire/silverstripe-dataobjectcruft.git",
-                "reference": "1.0"
+                "reference": "77540c940b219bc4dc034bc70cb885168d14521b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TheFrozenFire/silverstripe-dataobjectcruft/zipball/1.0",
-                "reference": "1.0",
+                "url": "https://api.github.com/repos/TheFrozenFire/silverstripe-dataobjectcruft/zipball/77540c940b219bc4dc034bc70cb885168d14521b",
+                "reference": "77540c940b219bc4dc034bc70cb885168d14521b",
                 "shasum": ""
             },
             "require": {
@@ -289,7 +414,12 @@
         }
     ],
     "aliases": [
-
+        {
+            "alias": "1.1.1",
+            "alias_normalized": "1.1.1.0",
+            "version": "dev-feature-ivr-generator",
+            "package": "callfire/php-sdk"
+        }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
@@ -297,6 +427,8 @@
         "silverstripe/framework": 20,
         "silverstripe/blog": 20,
         "undefinedoffset/sortablegridfield": 20,
+        "roave/silverstripe-callfire": 20,
+        "callfire/php-sdk": 20,
         "thefrozenfire/dataobjectcruft": 20
     },
     "platform": {
