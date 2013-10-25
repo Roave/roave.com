@@ -10,3 +10,6 @@
     <img src="http://coursio.com/images/coursio_logo.png"/>
     <img src="https://www.callfire.com/sites/all/themes/callfire/images/logo.png"/>
 </div>
+<div class="social-media">
+    <a href="https://plus.google.com/115050389541619828461" rel="publisher">Google+</a>
+</div>

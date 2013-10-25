@@ -182,3 +182,7 @@ body {
 .marketing p+h4 {
     margin-top: 28px;
 }
+
+.social-media {
+    display: none;
+}
