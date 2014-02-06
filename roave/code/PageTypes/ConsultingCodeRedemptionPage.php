@@ -35,16 +35,8 @@ class ConsultingCodeRedemptionPage_Controller extends Page_Controller {
     }
     
     public function redeemed() {
-        if(!($redemptionID = Session::get('ConsultingCodeRedemptionID'))) {
-            return $this->redirectBack();
-        }
-        
-        if(!($code = ConsultingCodeRedemption::get()->byID($redemptionID)->Code())) {
-            return $this->redirectBack();
-        }
-        
         return array(
-            'ConsultingCode' => $code,
+            
         );
     }
     
