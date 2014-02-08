@@ -1,5 +1,5 @@
 <p>
-    Please enter your code and information below.
+	Please enter your code and information below.
 </p>
 
 $RedemptionForm
