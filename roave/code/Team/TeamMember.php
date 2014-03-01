@@ -18,6 +18,10 @@ class TeamMember extends DataObject {
 		"Certifications" => "Certification"
 	);
 	
+	private static $has_many = array(
+		"CompletedDocuments" => "CompletedDocument",
+	);
+	
 	private static $summary_fields = array(
 		"Title",
 		"Email"
@@ -46,6 +50,23 @@ class TeamMember extends DataObject {
 		));
 		
 		$certificationsConfig->removeComponentsByType("GridFieldAddNewButton");
+		
+		$fields->addFieldsToTab("Root.Documents", array(
+			GridField::create("CompletedDocuments", "Documents", $this->CompletedDocuments(), $completedDocumentsConfig = GridFieldConfig_RelationEditor::create())
+		));
+		
+		$completedDocumentsConfig
+			->removeComponentsByType("GridFieldAddNewButton")
+			->getComponentByType("GridFieldDataColumns")
+				->setDisplayFields(array(
+					"Created" => "Added",
+					"TeamDocument.Name" => "Document Name",
+				))
+				->setFieldFormatting(array(
+					"TeamDocument.Name" => function($value, $listItem) {
+						return $listItem->TeamDocument()->Name;
+					}
+				));
 		
 		$this->extend("updateCMSFields", $fields);
 		

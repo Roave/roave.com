@@ -5,7 +5,8 @@ class TeamAdmin extends ModelAdmin {
 
 	public static $managed_models = array(
 		"TeamMember",
-		"Certification"
+		"Certification",
+		"TeamDocument",
 	);
 	
 	public static $allowed_actions = array(
