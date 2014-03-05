@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    title Roave
+
+    link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300italic,400,400italic,600,700,900&subset=latin,latin-ext' rel='stylesheet' 
+    link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet'
+    // for headings link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet'
+
+    link rel='stylesheet' href='/css/reset.css'
+    script src='https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js'
+    link rel='stylesheet' href='http://jmblog.github.io/color-themes-for-google-code-prettify/css/themes/tomorrow-night.css'
+    link rel='stylesheet' href='/css/styles.css'
+
+  body
+    header
+      a(href='/'): #logo
+        //img(src="/logo.png")
+        img(src="/roave-logo-tiny.svg")
+        //span Roave
+
+      ul.menu
+        li: a(href="#") Portfolio
+        li: a(href="/blog") Blog
+        li: a(href="/about") About
+
+    .splash
+      .zimg
+      .darken
+      h3 Roave is a hand-picked team of some of the most talented developers in the PHP community.
+
+    .container
+      == yield
+
+    footer
+      ul
+        li
+          h3 About
+          p Because we need a decent human-readable format that unambiguously maps to a hash table and the YAML spec is like 80 pages long and gives me rage. No, JSON doesn't count. You know why.
+        li
+          h3 Inquiries
+          p when you're trying very hard to focus on something and will choose that exact moment to drop her ball at your feet.
+        li
+          h3 Contact
+          p TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics.
+      hr
+      | &copy; Roave 2014
