@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Roave</title>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300italic,400,400italic,600,700,900&subset=latin,latin-ext" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="/css/reset.css" rel="stylesheet">
+    <style type="text/css"></style>
+    <link rel="stylesheet" type="text/css" href="./blog_files/prettify.css">
+    <link href="http://jmblog.github.io/color-themes-for-google-code-prettify/css/themes/tomorrow-night.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="/">
+            <div id="logo">
+                <img src="./blog_files/roave-logo-tiny.svg">
+            </div>
+        </a>
+        <ul class="menu">
+            <li><a href="/blog#">Portfolio</a>
+            </li>
+            <li><a href="./blog_files/blog.html">Blog</a>
+            </li>
+            <li><a href="/about">About</a>
+            </li>
+        </ul>
+    </header>
+    <div class="splash">
+        <div class="zimg"></div>
+        <div class="darken"></div>
+        <h3>Roave is a hand-picked team of some of the most talented developers in the PHP community.</h3>
+    </div>
+    <div class="container">
+        <section id="blog">
+            <div class="inner">
+                <article>
+                    <div class="author">
+                        <div class="img">
+                            <img src="./blog_files/14a3b917927a6cd5d3161f5a568ca590">
+                        </div>
+                        <div class="name">Blaž Hrastnik</div>
+                        <time>29th of February</time>
+                    </div>
+                    <h1>First blog post</h1>
+                    <h3>An awesome subtitle to attract attention</h3>
+                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed
+                        and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+                    <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully
+                        between its four familiar walls. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed
+                        in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at
+                        the dull weather.</p>
+                    <blockquote>The winter is coming. — Ned Stark</blockquote>
+                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed
+                        and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
+                    <hr>
+                    <p>He lay on his <code>armour-like back</code>, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide
+                        off any moment.</p>
+                    <h4>Ruby code in a PHP blogpost, Deal With It™</h4><pre class="prettyprint lang-ruby prettyprinted" style=""><span class="pln">require </span><span class="str">'redcarpet'</span><span class="pln">
+require </span><span class="str">'tilt'</span><span class="pln">
+require </span><span class="str">'slim'</span><span class="pln">
+require </span><span class="str">'yaml'</span><span class="pln">
+require </span><span class="str">'rouge'</span><span class="pln">
+require </span><span class="str">'dove/rougify'</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Dove</span><span class="pln">
+  </span><span class="kwd">def</span><span class="pln"> initialize</span><span class="pun">(</span><span class="pln">filename</span><span class="pun">,</span><span class="pln"> options </span><span class="pun">={})</span><span class="pln">
+    </span><span class="lit">@file</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> filename
+
+    </span><span class="com"># When `block` is given, it must read the contents of the file using</span><span class="pln">
+    </span><span class="com"># whatever means necessary and return it as a string. With no `block`,</span><span class="pln">
+    </span><span class="com"># the file is read to retrieve data.</span><span class="pln">
+    </span><span class="lit">@data</span><span class="pun">,</span><span class="pln"> </span><span class="lit">@yaml_data</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> extract_yaml</span><span class="pun">(</span><span class="kwd">if</span><span class="pln"> block_given</span><span class="pun">?</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"> </span><span class="kwd">yield</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="typ">File</span><span class="pun">.</span><span class="pln">read</span><span class="pun">(</span><span class="pln">filename</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">end</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="lit">@options</span><span class="pln"> </span><span class="pun">=</span><span class="pln">  </span><span class="pun">{</span><span class="pln">
+      </span><span class="pun">:</span><span class="pln">output_dir    </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'.'</span><span class="pun">,</span><span class="pln">
+      </span><span class="pun">:</span><span class="pln">template_file </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">"#{File.dirname(__FILE__)}/dove/layout.slim"</span><span class="pun">,</span><span class="pln">
+      </span><span class="com">#:stylesheet    =&gt; 'styles.css'</span><span class="pln">
+    </span><span class="pun">}.</span><span class="pln">merge</span><span class="pun">(</span><span class="pln">options</span><span class="pun">)</span><span class="pln">
+  </span><span class="kwd">end</span><span class="pln">
+
+  </span><span class="com"># Extracts the YAML frontmatter.</span><span class="pln">
+  </span><span class="kwd">def</span><span class="pln"> extract_yaml text
+    </span><span class="kwd">if</span><span class="pln"> md </span><span class="pun">=</span><span class="pln"> text</span><span class="pun">.</span><span class="pln">match</span><span class="pun">(</span><span class="str">/\A(---\s*\n.*?\n?)^(---\s*$\n?)/</span><span class="pln">m</span><span class="pun">)</span><span class="pln">
+      </span><span class="pun">[</span><span class="pln">md</span><span class="pun">.</span><span class="pln">post_match</span><span class="pun">,</span><span class="pln"> YAML</span><span class="pun">.</span><span class="pln">load</span><span class="pun">(</span><span class="pln">md</span><span class="pun">[</span><span class="lit">1</span><span class="pun">])]</span><span class="pln">
+    </span><span class="kwd">else</span><span class="pln">
+      </span><span class="pun">[</span><span class="pln">text</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{}]</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+  </span><span class="kwd">end</span><span class="pln">
+
+  </span><span class="com"># Renders the Markdown file and inserts it into the layout.</span><span class="pln">
+  </span><span class="kwd">def</span><span class="pln"> render
+    extensions </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      autolink</span><span class="pun">:</span><span class="pln">            </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+      space_after_headers</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+      fenced_code_blocks</span><span class="pun">:</span><span class="pln">  </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+      lax_spacing</span><span class="pun">:</span><span class="pln">         </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+      strikethrough</span><span class="pun">:</span><span class="pln">       </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+      superscript</span><span class="pun">:</span><span class="pln">         </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+      no_intra_emphasis</span><span class="pun">:</span><span class="pln">   </span><span class="kwd">true</span><span class="pln"> 
+    </span><span class="pun">}</span><span class="pln">
+    markdown </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Redcarpet</span><span class="pun">::</span><span class="typ">Markdown</span><span class="pun">.</span><span class="pln">new</span><span class="pun">(</span><span class="typ">Rougify</span><span class="pun">,</span><span class="pln"> extensions</span><span class="pun">)</span><span class="pln">
+    </span><span class="typ">Tilt</span><span class="pun">.</span><span class="pln">new</span><span class="pun">(</span><span class="lit">@options</span><span class="pun">[:</span><span class="pln">template_file</span><span class="pun">],</span><span class="pln"> </span><span class="pun">{</span><span class="pln">pretty</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">}).</span><span class="pln">render</span><span class="pun">(</span><span class="typ">Object</span><span class="pun">.</span><span class="pln">new</span><span class="pun">,</span><span class="pln"> </span><span class="lit">@yaml_data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> markdown</span><span class="pun">.</span><span class="pln">render</span><span class="pun">(</span><span class="lit">@data</span><span class="pun">)</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+  </span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span></pre>
+                    <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+                    <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+                    <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed
+                        a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.</p>
+                </article>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <ul>
+            <li>
+                <h3>About</h3>
+                <p>Because we need a decent human-readable format that unambiguously maps to a hash table and the YAML spec is like 80 pages long and gives me rage. No, JSON doesn't count. You know why.</p>
+            </li>
+            <li>
+                <h3>Inquiries</h3>
+                <p>when you're trying very hard to focus on something and will choose that exact moment to drop her ball at your feet.</p>
+            </li>
+            <li>
+                <h3>Contact</h3>
+                <p>TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics.</p>
+            </li>
+        </ul>
+        <hr>© Roave 2014</footer>
+</body>
+
+</html>
