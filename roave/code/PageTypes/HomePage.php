@@ -1,13 +1,17 @@
 <?php
 class HomePage extends Page {
-	private static $db = array(
-		
+	private static $has_many = array(
+		"Sections" => "HomePageSection",
 	);
 	
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		
-		$fields->removeByName("Content");
+		$fields->addFieldsToTab('Root.Main', array(
+			GridField::create("Sections", "Sections", $this->Sections(), GridFieldConfig_RelationEditor::create()),
+		), 'Content');
+				
+		$fields->removeByName("Content");		
 		
 		return $fields;
 	}
