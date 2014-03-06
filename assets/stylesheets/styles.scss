@@ -129,6 +129,7 @@ header {
   z-index: 999;
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
 
+  & > a { border: none }
   #logo { 
     float: left;
     color: #1d1d28;
@@ -170,6 +171,7 @@ footer {
   text-align: center;
   padding: 2rem 0;
   box-shadow: inset 0 1px 2px rgba(0,0,0,.25);
+  overflow: hidden;
 
   ul {
     max-width: 900px;
@@ -198,16 +200,32 @@ footer {
     margin: 1rem 0;
     border-bottom: 1px solid #333;
   }
+
+  dl {
+    display: table-row;
+    dt, dd {
+      display: table-cell;
+      padding: 4px;
+    }
+    dt { text-align: right }
+  }
 }
 
 .splash {
   background: #1d1d28;
   box-shadow: 0 1px rgba(0,0,0,.05), inset 0 -1px rgba(0,0,0,.05);
-  height: 260px;
+  height: 300px;
 
-  line-height: 280px;
+  line-height: 320px;
   text-align: center;
   position: relative;
+  overflow: hidden;
+
+  .punchline {
+    display: inline-block;
+    line-height: 1;
+    padding: 0 1rem;
+  }
 
   .zimg { 
     position: absolute;
@@ -226,8 +244,9 @@ footer {
     background-size: 100% auto;
 
     background: url('/IMG_9464 (2)-2-pimp.jpg');
-    background-size: 100% auto;
-    background-position: center -215px;
+    background-size: 1920px auto;
+    background-position: center -315px;
+    background-repeat: no-repeat;
   }
   .darken { 
     position: absolute;
@@ -328,5 +347,74 @@ article {
 
     .name { font-weight: 600 }
     time { font-style: italic }
+  }
+}
+
+// media queries
+
+@media (max-width: 1440px) {
+  .splash { 
+    height: 260px;
+    line-height: 280px;
+    .zimg {
+      background-size: 1440px auto;
+      background-position: center -215px;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .splash { 
+    height: 260px;
+    line-height: 280px;
+    .zimg {
+      background-size: 960px auto;
+      background-position: center -115px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    //font-size: 14px;
+    margin-top: 0;
+  }
+  header {
+    position: relative;
+    line-height: 2rem;
+
+    a, #logo, ul.menu {
+      display: block;
+      float: none;
+    }
+    ul.menu {
+      border: none;
+      li {
+        border: none;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  .splash { 
+    height: 260px;
+    line-height: 280px;
+    .zimg {
+      background-size: 480px auto;
+      background-position: center;
+    }
+  }
+  section {
+    padding: 1.5rem 0 .5rem;
+    .inner {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  footer {
+    padding: 2rem 1rem;
+    ul li {
+      width: 100%;
+    }
   }
 }

@@ -7,6 +7,8 @@ html
     link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet'
     // for headings link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet'
 
+    meta name="viewport" content="width=device-width, user-scalable=no"
+
     link rel='stylesheet' href='/css/reset.css'
     script src='https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js'
     link rel='stylesheet' href='http://jmblog.github.io/color-themes-for-google-code-prettify/css/themes/tomorrow-night.css'
@@ -27,7 +29,8 @@ html
     .splash
       .zimg
       .darken
-      h3 Roave is a hand-picked team of some of the most talented developers in the PHP community.
+      .punchline
+        h3 Roave is a hand-picked team of some of the most talented developers in the PHP community.
 
     .container
       == yield
@@ -42,6 +45,18 @@ html
           p when you're trying very hard to focus on something and will choose that exact moment to drop her ball at your feet.
         li
           h3 Contact
-          p TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics.
+
+          dl
+            dt Phone
+            dd: a(href="tel:1855557623") 1-855-55-ROAVE
+          dl
+            dt Email
+            dd: a(href="mail:info@roave.com") info@roave.com
+          dl
+            dt Twitter
+            dd: a(href="http://twitter.com/roaveteam") @RoaveTeam
+          dl
+            dt Google+
+            dd: a(href="http://google.com/+Roave") Roave
       hr
       | &copy; Roave 2014
