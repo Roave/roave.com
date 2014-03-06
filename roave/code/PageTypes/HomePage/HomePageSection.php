@@ -11,6 +11,10 @@ class HomePageSection extends DataObject {
 		"HomePage" => "HomePage",
 	);
 	
+	private static $many_many = array(
+		"Clients" => "CompanyClient",
+	);
+	
 	public function getCMSFields() {
 		$fields = FieldList::create(TabSet::create("Root"));
 		
@@ -19,6 +23,10 @@ class HomePageSection extends DataObject {
 			HTMLEditorField::create("Content"),
 			TextField::create("ButtonLink"),
 			TextField::create("ButtonText"),
+		));
+		
+		$fields->addFieldsToTab("Root.Clients", array(
+			GridField::create("Clients", "Clients", $this->Clients(), GridFieldConfig_RelationEditor::create())
 		));
 		
 		$this->extend('updateCMSFields', $fields);

@@ -17,7 +17,8 @@
     <header>
         <a href="/">
             <div id="logo">
-                <img src="$ThemeDir/images/roave-logo-tiny.svg">
+                <img src="$ThemeDir/images/roave-logo-tiny.svg" onerror="this.style.display = 'none'; document.getElementById('replacement-logo').style.display = 'block';">
+                <% include ReplacementLogo %>
             </div>
         </a>
         <ul class="menu">
@@ -29,7 +30,9 @@
     <div class="splash">
         <div class="zimg"></div>
         <div class="darken"></div>
-        <h3>$SiteConfig.Tagline</h3>
+        <div class="punchline">
+	        <h3>$SiteConfig.Tagline</h3>
+	    </div>
     </div>
     <div class="container">
         $Layout

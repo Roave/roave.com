@@ -151,14 +151,24 @@ footer {
   footer hr {
     margin: 1rem 0;
     border-bottom: 1px solid #333; }
+  footer dl {
+    display: table-row; }
+    footer dl dt, footer dl dd {
+      display: table-cell;
+      padding: 4px; }
+    footer dl dt {
+      text-align: right; }
 
 .splash {
   background: #1d1d28;
   box-shadow: 0 1px rgba(0, 0, 0, 0.05), inset 0 -1px rgba(0, 0, 0, 0.05);
-  height: 260px;
-  line-height: 280px;
+  height: 300px;
+  line-height: 320px;
   text-align: center;
   position: relative; }
+  .splash .punchline {
+    display: inline-block;
+    line-height: 1; }
   .splash .zimg {
     position: absolute;
     top: 0;
@@ -168,8 +178,9 @@ footer {
     opacity: 1;
     height: 100%;
     background: url("../images/splash.jpg");
-    background-size: 100% auto;
-    background-position: center -215px; }
+    background-size: 1920px auto;
+    background-position: center -315px;
+    background-repeat: no-repeat; }
   .splash .darken {
     position: absolute;
     top: 0;
@@ -248,3 +259,44 @@ article {
       font-weight: 600; }
     article .author time {
       font-style: italic; }
+
+@media (max-width: 1440px) {
+  .splash {
+    height: 260px;
+    line-height: 280px; }
+    .splash .zimg {
+      background-size: 1440px auto;
+      background-position: center -215px; } }
+@media (max-width: 960px) {
+  .splash {
+    height: 260px;
+    line-height: 280px; }
+    .splash .zimg {
+      background-size: 960px auto;
+      background-position: center -115px; } }
+@media (max-width: 480px) {
+  header a, header #logo, header ul.menu {
+    display: block;
+    float: none; }
+  header ul.menu {
+    border: none; }
+    header ul.menu li {
+      border: none;
+      width: 100%;
+      display: block; }
+
+  .splash {
+    height: 260px;
+    line-height: 280px; }
+    .splash .zimg {
+      background-size: 480px auto;
+      background-position: center; }
+
+  section .inner {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+
+  footer {
+    padding: 2rem 1rem; }
+    footer ul li {
+      width: 100%; } }
