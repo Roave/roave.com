@@ -372,6 +372,16 @@ article {
       background-position: center -115px;
     }
   }
+  section {
+    padding: 1.5rem 0 .5rem;
+    .inner {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  footer {
+    padding: 2rem 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -404,17 +414,7 @@ article {
       background-position: center;
     }
   }
-  section {
-    padding: 1.5rem 0 .5rem;
-    .inner {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
-  footer {
-    padding: 2rem 1rem;
-    ul li {
-      width: 100%;
-    }
+  footer ul li {
+    width: 100%;
   }
 }
