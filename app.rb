@@ -15,15 +15,15 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    slim :index
+    erb :index
   end
 
   get '/about' do
-    slim :about
+    erb :about
   end
 
   get '/blog' do
-    slim :blog
+    erb :blog
   end
 
   get '/css/*.css' do
