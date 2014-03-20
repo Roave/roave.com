@@ -4,8 +4,8 @@
     <% base_tag %>
     <title>$SiteConfig.Title - $Title</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <% require css("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300italic,400,400italic,600,700,900&subset=latin,latin-ext") %>
-    <% require css("http://fonts.googleapis.com/css?family=Source+Code+Pro") %>
+    <% require css("//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300italic,400,400italic,600,700,900&subset=latin,latin-ext") %>
+    <% require css("//fonts.googleapis.com/css?family=Source+Code+Pro") %>
     <% require themedCSS("reset") %>
     <% require themedCSS("tomorrow-night") %>
     <% require themedCSS("styles") %>
