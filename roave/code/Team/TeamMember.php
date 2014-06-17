@@ -83,6 +83,6 @@ class TeamMember extends DataObject {
 	}
 	
 	public function getGravatarUrl() {
-		return "http://www.gravatar.com/avatar/".md5(strtolower(trim($this->Email)));
+		return "//www.gravatar.com/avatar/".md5(strtolower(trim($this->Email)));
 	}
 }
