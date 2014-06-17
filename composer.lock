@@ -1,17 +1,24 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "d270ea06bbd05c1bac40e966d3ca95ab",
+    "hash": "3f57fa6f501fb67938f3bc20b81240f0",
     "packages": [
         {
             "name": "callfire/php-sdk",
-            "version": "dev-feature-ivr-generator",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
-                "url": "git@bitbucket.org:mediatechdesigns/callfire-api-library.git",
-                "reference": "c32a36d5ab54840239e60f3c540fbeb57dd4af99"
+                "url": "https://github.com/CallFire/CallFire-PHP-SDK.git",
+                "reference": "394a66e9689169cf2758a2fc19c6b4c4d1d612aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CallFire/CallFire-PHP-SDK/zipball/394a66e9689169cf2758a2fc19c6b4c4d1d612aa",
+                "reference": "394a66e9689169cf2758a2fc19c6b4c4d1d612aa",
+                "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
@@ -35,6 +42,7 @@
                     "tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -46,7 +54,7 @@
             ],
             "description": "PHP SDK for integrating with the CallFire API",
             "homepage": "http://www.callfire.com/",
-            "time": "2013-08-24 04:54:18"
+            "time": "2014-04-16 18:40:34"
         },
         {
             "name": "composer/installers",
@@ -54,20 +62,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "b3bd071ea114a57212c75aa6a2eef5cfe0cc798f"
+                "reference": "11f7f8e82cbe1538721b72aa14bbd8007dde96e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/b3bd071ea114a57212c75aa6a2eef5cfe0cc798f",
-                "reference": "b3bd071ea114a57212c75aa6a2eef5cfe0cc798f",
+                "url": "https://api.github.com/repos/composer/installers/zipball/11f7f8e82cbe1538721b72aa14bbd8007dde96e1",
+                "reference": "11f7f8e82cbe1538721b72aa14bbd8007dde96e1",
                 "shasum": ""
             },
             "replace": {
+                "roundcube/plugin-installer": "*",
                 "shama/baton": "*"
             },
             "require-dev": {
                 "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "3.7.*"
+                "phpunit/phpunit": "4.1.*"
             },
             "type": "composer-installer",
             "extra": {
@@ -96,30 +105,45 @@
             "description": "A multi-framework Composer library installer",
             "homepage": "http://composer.github.com/installers/",
             "keywords": [
-                "TYPO3 CMS",
-                "TYPO3 Flow",
-                "TYPO3 Neos",
+                "Craft",
+                "Dolibarr",
+                "Hurad",
+                "MODX Evo",
+                "OXID",
+                "WolfCMS",
                 "agl",
+                "annotatecms",
+                "bitrix",
                 "cakephp",
                 "codeigniter",
+                "concrete5",
+                "croogo",
                 "drupal",
+                "elgg",
                 "fuelphp",
                 "installer",
                 "joomla",
                 "kohana",
                 "laravel",
-                "li3",
                 "lithium",
+                "magento",
                 "mako",
+                "mediawiki",
                 "modulework",
+                "moodle",
                 "phpbb",
+                "piwik",
                 "ppi",
+                "roundcube",
+                "shopware",
                 "silverstripe",
                 "symfony",
+                "typo3",
                 "wordpress",
-                "zend"
+                "zend",
+                "zikula"
             ],
-            "time": "2013-08-20 04:37:09"
+            "time": "2014-06-04 16:59:54"
         },
         {
             "name": "roave/silverstripe-callfire",
@@ -127,12 +151,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SilverStripe-CallFire-Module.git",
-                "reference": "1b7f33a88845b17d89af34a9f51c6622a8ffd9c1"
+                "reference": "7c7fad046386c649c2a5b3ca533a05a71c1071a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SilverStripe-CallFire-Module/zipball/1b7f33a88845b17d89af34a9f51c6622a8ffd9c1",
-                "reference": "1b7f33a88845b17d89af34a9f51c6622a8ffd9c1",
+                "url": "https://api.github.com/repos/Roave/SilverStripe-CallFire-Module/zipball/7c7fad046386c649c2a5b3ca533a05a71c1071a4",
+                "reference": "7c7fad046386c649c2a5b3ca533a05a71c1071a4",
                 "shasum": ""
             },
             "require": {
@@ -157,7 +181,7 @@
                 "callfire",
                 "silverstripe"
             ],
-            "time": "2013-08-30 20:31:50"
+            "time": "2013-08-30 23:18:11"
         },
         {
             "name": "silverstripe/blog",
@@ -165,12 +189,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "0599efa46b0c73d425ccaaccea64861de36e2506"
+                "reference": "067003a6c313267cc61ebce1240f906d695c75b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/0599efa46b0c73d425ccaaccea64861de36e2506",
-                "reference": "0599efa46b0c73d425ccaaccea64861de36e2506",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/067003a6c313267cc61ebce1240f906d695c75b3",
+                "reference": "067003a6c313267cc61ebce1240f906d695c75b3",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +222,7 @@
                 "blog",
                 "silverstripe"
             ],
-            "time": "2013-08-22 15:04:29"
+            "time": "2014-03-22 10:49:11"
         },
         {
             "name": "silverstripe/cms",
@@ -206,12 +230,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "4e031076be5b58917ac74c7f17295dc32bb5de09"
+                "reference": "601efbc0882ab802ca2d8a5ef1ecfc4e398b4034"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/4e031076be5b58917ac74c7f17295dc32bb5de09",
-                "reference": "4e031076be5b58917ac74c7f17295dc32bb5de09",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/601efbc0882ab802ca2d8a5ef1ecfc4e398b4034",
+                "reference": "601efbc0882ab802ca2d8a5ef1ecfc4e398b4034",
                 "shasum": ""
             },
             "require": {
@@ -245,7 +269,7 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2013-08-29 15:08:42"
+            "time": "2014-06-16 23:15:33"
         },
         {
             "name": "silverstripe/framework",
@@ -253,17 +277,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "5f0329c6f20a6c5330ac8f517ebe79a222a3b852"
+                "reference": "11cc27f700a092e8a318b6b69cef43183aef8b17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/5f0329c6f20a6c5330ac8f517ebe79a222a3b852",
-                "reference": "5f0329c6f20a6c5330ac8f517ebe79a222a3b852",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/11cc27f700a092e8a318b6b69cef43183aef8b17",
+                "reference": "11cc27f700a092e8a318b6b69cef43183aef8b17",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "*",
                 "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7@stable"
             },
             "type": "silverstripe-module",
             "autoload": {
@@ -291,7 +318,7 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2013-08-30 08:12:50"
+            "time": "2014-06-17 02:48:56"
         },
         {
             "name": "undefinedoffset/sortablegridfield",
@@ -299,23 +326,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/SortableGridField.git",
-                "reference": "53eef90c978782092e40b6381aefc2bbbb1bf461"
+                "reference": "3f1f5dbdb4cce4b7fb9056819caf895ee45f390d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/53eef90c978782092e40b6381aefc2bbbb1bf461",
-                "reference": "53eef90c978782092e40b6381aefc2bbbb1bf461",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/3f1f5dbdb4cce4b7fb9056819caf895ee45f390d",
+                "reference": "3f1f5dbdb4cce4b7fb9056819caf895ee45f390d",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "*",
-                "silverstripe/framework": "3.*"
+                "silverstripe/framework": ">=3.0.1,<3.2"
             },
             "type": "silverstripe-module",
             "extra": {
                 "installer-name": "sortablegridfield"
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
             "authors": [
                 {
                     "name": "Ed Chipman",
@@ -328,34 +358,35 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2013-08-24 00:19:35"
+            "time": "2014-05-03 20:07:22"
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "dev-develop",
+            "version": "2.2.6",
             "target-dir": "Zend/Stdlib",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendStdlib.git",
-                "reference": "295d125207f6ab60739f6ff996c97e6bb3eee7c7"
+                "reference": "e646729f2274f4552b6a92e38d8e458efe08ebc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/295d125207f6ab60739f6ff996c97e6bb3eee7c7",
-                "reference": "295d125207f6ab60739f6ff996c97e6bb3eee7c7",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/e646729f2274f4552b6a92e38d8e458efe08ebc5",
+                "reference": "e646729f2274f4552b6a92e38d8e458efe08ebc5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "suggest": {
-                "pecl-weakref": "Implementation of weak references for Stdlib\\CallbackHandler"
+                "zendframework/zend-eventmanager": "To support aggregate hydrator usage",
+                "zendframework/zend-servicemanager": "To support hydrator plugin manager usage"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev",
-                    "dev-develop": "2.2-dev"
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
                 }
             },
             "autoload": {
@@ -371,7 +402,7 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2013-08-21 17:16:25"
+            "time": "2014-01-04 13:00:28"
         }
     ],
     "packages-dev": [
@@ -413,14 +444,7 @@
             "time": "2013-04-21 04:45:32"
         }
     ],
-    "aliases": [
-        {
-            "alias": "1.1.1",
-            "alias_normalized": "1.1.1.0",
-            "version": "dev-feature-ivr-generator",
-            "package": "callfire/php-sdk"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "silverstripe/cms": 20,
@@ -428,13 +452,10 @@
         "silverstripe/blog": 20,
         "undefinedoffset/sortablegridfield": 20,
         "roave/silverstripe-callfire": 20,
-        "callfire/php-sdk": 20,
         "thefrozenfire/dataobjectcruft": 20
     },
     "platform": {
         "php": ">=5.3.2"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }

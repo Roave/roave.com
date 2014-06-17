@@ -79,7 +79,7 @@ class IvrConfig extends DataExtension {
 				sleep(1); // To allow gist propagation before display
 			}
 		}
-		
+
 		if($gist) {
 			$gist = json_decode($gist);
 			$gistEmbed = "<script src=\"{$gist->html_url}.js\"></script>";
@@ -99,7 +99,8 @@ class IvrConfig extends DataExtension {
 		curl_setopt_array($curl, array(
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_POST => true,
-			CURLOPT_POSTFIELDS => $data
+			CURLOPT_POSTFIELDS => $data,
+			CURLOPT_USERAGENT => 'PHP',
 		));
 		
 		$gist = curl_exec($curl);

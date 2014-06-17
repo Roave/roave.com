@@ -1,10 +1,4 @@
 {
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "git@bitbucket.org:mediatechdesigns/callfire-api-library.git"
-		}
-	],
 	"name": "roave/website",
 	"description": "Roave Website",
 	"require": {
@@ -13,8 +7,7 @@
 		"silverstripe/framework": "3.1.x-dev",
 		"silverstripe/blog": "dev-master",
 		"undefinedoffset/sortablegridfield": "dev-master",
-		"roave/silverstripe-callfire": "dev-master",
-		"callfire/php-sdk": "dev-feature-ivr-generator as 1.1.1"
+		"roave/silverstripe-callfire": "dev-master"
 	},
 	"require-dev": {
 		"thefrozenfire/dataobjectcruft": "dev-master"
