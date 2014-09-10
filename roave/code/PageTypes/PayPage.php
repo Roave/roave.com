@@ -6,6 +6,7 @@ class PayPage extends Page {
 		"PaymentDescription" => "Text",
 		"PaymentButtonLabel" => "Text",
 		"PaymentPanelButtonLabel" => "Text",
+		"FinishedContent" => "HTMLText",
 	);
 	
 	public function getCMSFields() {
@@ -16,6 +17,7 @@ class PayPage extends Page {
 		$fields->addFieldToTab('Root.Main', TextField::create('PaymentDescription', 'Payment Description'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('PaymentButtonLabel', 'Payment Button Label'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('PaymentPanelButtonLabel', 'Payment Panel Button Label'), 'Content');
+		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('FinishedContent', 'Post-submit landing page content'), 'Content');
 		
 		$fields->removeByName("Content");
 		
@@ -26,6 +28,7 @@ class PayPage extends Page {
 class PayPage_Controller extends Page_Controller {
 	private static $allowed_actions = array(
 		'index',
+		'finished',
 		'FormCreateCustomer',
 	);
 	
@@ -70,6 +73,6 @@ class PayPage_Controller extends Page_Controller {
 			),
 		));
 		
-		Debug::dump($customer);
+		return $this->redirect($this->Link('finished'));
 	}
 }
