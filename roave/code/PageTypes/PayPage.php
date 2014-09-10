@@ -62,7 +62,7 @@ class PayPage_Controller extends Page_Controller {
 		Stripe::setApiKey($this->SecretKey);
 		
 		$customer = Stripe_Customer::create(array(
-			'card' => $request->getVar('stripeToken'),
+			'card' => $request->postVar('stripeToken'),
 			'description' => $data['Name'],
 			'metadata' => array(
 				'Street' => $data['Street'],
