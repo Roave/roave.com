@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3f57fa6f501fb67938f3bc20b81240f0",
+    "hash": "cb6406bf69e38ca0bf07a94af5763528",
     "packages": [
         {
             "name": "callfire/php-sdk",
@@ -62,12 +62,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "11f7f8e82cbe1538721b72aa14bbd8007dde96e1"
+                "reference": "74fb0a7a1a23696d9c8cc2fba5903f6711cdd067"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/11f7f8e82cbe1538721b72aa14bbd8007dde96e1",
-                "reference": "11f7f8e82cbe1538721b72aa14bbd8007dde96e1",
+                "url": "https://api.github.com/repos/composer/installers/zipball/74fb0a7a1a23696d9c8cc2fba5903f6711cdd067",
+                "reference": "74fb0a7a1a23696d9c8cc2fba5903f6711cdd067",
                 "shasum": ""
             },
             "replace": {
@@ -98,8 +98,7 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama",
-                    "role": "Developer"
+                    "homepage": "https://github.com/shama"
                 }
             ],
             "description": "A multi-framework Composer library installer",
@@ -115,6 +114,7 @@
                 "annotatecms",
                 "bitrix",
                 "cakephp",
+                "chef",
                 "codeigniter",
                 "concrete5",
                 "croogo",
@@ -134,6 +134,7 @@
                 "phpbb",
                 "piwik",
                 "ppi",
+                "puppet",
                 "roundcube",
                 "shopware",
                 "silverstripe",
@@ -143,7 +144,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-06-04 16:59:54"
+            "time": "2014-08-18 20:00:12"
         },
         {
             "name": "roave/silverstripe-callfire",
@@ -189,12 +190,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "067003a6c313267cc61ebce1240f906d695c75b3"
+                "reference": "8b28a1d047aea632b7ce9c552f0e04c6a282816c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/067003a6c313267cc61ebce1240f906d695c75b3",
-                "reference": "067003a6c313267cc61ebce1240f906d695c75b3",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/8b28a1d047aea632b7ce9c552f0e04c6a282816c",
+                "reference": "8b28a1d047aea632b7ce9c552f0e04c6a282816c",
                 "shasum": ""
             },
             "require": {
@@ -222,7 +223,7 @@
                 "blog",
                 "silverstripe"
             ],
-            "time": "2014-03-22 10:49:11"
+            "time": "2014-08-24 23:20:55"
         },
         {
             "name": "silverstripe/cms",
@@ -230,12 +231,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "601efbc0882ab802ca2d8a5ef1ecfc4e398b4034"
+                "reference": "ae4601be546d3d0b3b5dc8f22db5bb96291ca0f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/601efbc0882ab802ca2d8a5ef1ecfc4e398b4034",
-                "reference": "601efbc0882ab802ca2d8a5ef1ecfc4e398b4034",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/ae4601be546d3d0b3b5dc8f22db5bb96291ca0f5",
+                "reference": "ae4601be546d3d0b3b5dc8f22db5bb96291ca0f5",
                 "shasum": ""
             },
             "require": {
@@ -269,7 +270,7 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2014-06-16 23:15:33"
+            "time": "2014-08-31 20:19:41"
         },
         {
             "name": "silverstripe/framework",
@@ -277,12 +278,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "11cc27f700a092e8a318b6b69cef43183aef8b17"
+                "reference": "f0ca37fdea0f1b7f67d383e9cda968c8115ea0f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/11cc27f700a092e8a318b6b69cef43183aef8b17",
-                "reference": "11cc27f700a092e8a318b6b69cef43183aef8b17",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/f0ca37fdea0f1b7f67d383e9cda968c8115ea0f1",
+                "reference": "f0ca37fdea0f1b7f67d383e9cda968c8115ea0f1",
                 "shasum": ""
             },
             "require": {
@@ -318,7 +319,55 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2014-06-17 02:48:56"
+            "time": "2014-09-08 23:43:05"
+        },
+        {
+            "name": "stripe/stripe-php",
+            "version": "v1.17.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "281c5b2717b50bc4cc8c4842b13856ff3431c878"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/281c5b2717b50bc4cc8c4842b13856ff3431c878",
+                "reference": "281c5b2717b50bc4cc8c4842b13856ff3431c878",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "simpletest/simpletest": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/Stripe/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "time": "2014-08-01 05:58:56"
         },
         {
             "name": "undefinedoffset/sortablegridfield",
@@ -326,12 +375,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/SortableGridField.git",
-                "reference": "3f1f5dbdb4cce4b7fb9056819caf895ee45f390d"
+                "reference": "86d08f97574d32ec553edc2eef4bfbc181ef14f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/3f1f5dbdb4cce4b7fb9056819caf895ee45f390d",
-                "reference": "3f1f5dbdb4cce4b7fb9056819caf895ee45f390d",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/86d08f97574d32ec553edc2eef4bfbc181ef14f1",
+                "reference": "86d08f97574d32ec553edc2eef4bfbc181ef14f1",
                 "shasum": ""
             },
             "require": {
@@ -358,7 +407,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2014-05-03 20:07:22"
+            "time": "2014-08-06 16:15:32"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -444,7 +493,9 @@
             "time": "2013-04-21 04:45:32"
         }
     ],
-    "aliases": [],
+    "aliases": [
+
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "silverstripe/cms": 20,
@@ -454,8 +505,11 @@
         "roave/silverstripe-callfire": 20,
         "thefrozenfire/dataobjectcruft": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.2"
     },
-    "platform-dev": []
+    "platform-dev": [
+
+    ]
 }

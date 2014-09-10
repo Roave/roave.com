@@ -7,7 +7,8 @@
 		"silverstripe/framework": "3.1.x-dev",
 		"silverstripe/blog": "dev-master",
 		"undefinedoffset/sortablegridfield": "dev-master",
-		"roave/silverstripe-callfire": "dev-master"
+		"roave/silverstripe-callfire": "dev-master",
+		"stripe/stripe-php": "1.*"
 	},
 	"require-dev": {
 		"thefrozenfire/dataobjectcruft": "dev-master"

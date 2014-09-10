@@ -1,0 +1,26 @@
+section.pay form {
+	max-width: 500px;
+}
+section.pay form .Actions {
+	display: none;
+}
+section.pay form .field {
+	padding: 0.25em;
+}
+section.pay form .field label {
+	float: left;
+	font-weight: bold;
+	text-align: right;
+	margin-right: 0.5em;
+	width: 45%;
+	line-height: 2em;
+}
+section.pay form .field input {
+	padding: 0.5em;
+	border: none;
+	border: 1px solid #CCCCCC;
+	border-radius: 0.5em;
+}
+section.pay form .stripe-button-el {
+	margin-left: 47%;
+}
