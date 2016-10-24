@@ -145,6 +145,18 @@ nav input[type=checkbox], nav label.show-menu {
 div.content {
     margin: 0px 10px;
 }
+
+
+/**
+ * Talks
+ */
+section#talks article {
+    box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+    border-radius: 5px;
+    padding: 1px 10px;
+    margin-bottom: 30px;
+}
+
 /**
  * Team
  */
