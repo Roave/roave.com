@@ -1,0 +1,225 @@
+html, body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.45;
+}
+
+/**
+ * Nav
+ */
+body {
+    padding-top: 50px;
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 50px;
+    background-color: #FFF;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+nav img {
+    height: 37px;
+    padding: 5px 5px;
+    max-width: 49%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+    overflow: hidden; /** only needed for submenus */
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    float: left;
+    border-left: 1px solid #eee;
+}
+
+nav li a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: #46494C;
+    text-decoration: none;
+    padding: 0 16px;
+    font-weight: bold;
+}
+
+nav li:hover a {
+    color: #1985A1;
+}
+
+nav input[type=checkbox], nav label.show-menu {
+    display: none;
+}
+
+@media screen and (max-width : 725px) {
+
+    nav input[type=checkbox]:checked ~ ul {
+        max-height: 30em;
+        transition: max-height .25s;
+        /*display: block;*/
+    }
+
+    nav ul {
+        float: none;
+        position: static;
+        max-height: 0em;
+        transition: max-height .25s;
+    }
+
+    nav ul li {
+        border-top: 1px solid #eee;
+    }
+    nav ul li, nav li a {
+        width: 100%;
+    }
+
+    nav label.show-menu {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 10px 0;
+        height: 30px;
+        /*max-width: 50%;*/
+        width: 100%;
+        padding-right: 30px;
+        text-align: right;
+        display:block;
+    }
+
+    nav label.show-menu .bar {
+        background-color: #777;
+        display: block;
+        width: 20px;
+        height: 2px;
+        border-radius: 100px;
+        position: absolute;
+        top: 25px;
+        right: 10px;
+        -webkit-transition: all 0.25s;
+        -moz-transition: all 0.25s;
+        -ms-transition: all 0.25s;
+        transition: all 0.25s;
+    }
+
+    nav label.show-menu .bar:first-child {
+        -webkit-transform: translateY(-6px);
+        -moz-transform: translateY(-6px);
+        -ms-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+
+    nav label.show-menu .bar:last-child {
+        -webkit-transform: translateY(6px);
+        -moz-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        transform: translateY(6px);
+    }
+
+    nav input[type=checkbox]:checked ~ .show-menu .bar:first-child {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    nav input[type=checkbox]:checked ~ .show-menu .bar:nth-child(2) {
+        height: 0px;
+    }
+
+    nav input[type=checkbox]:checked ~ .show-menu .bar:last-child {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+}
+div.content {
+    margin: 0px 10px;
+}
+/**
+ * Team
+ */
+.team-member h3 {
+    height: 50px;
+    line-height: 50px;
+}
+.team-member img {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    max-width: 50px;
+}
+
+/**
+ * Banner
+ */
+div.banner {
+    height: 300px;
+    background-color: #000;
+}
+
+#banner-roave-is h3 {
+    display:table-cell;
+    vertical-align: middle;
+}
+#banner-roave-is {
+    display: table;
+    height: 300px;
+    width: 100%;
+    background-image: url(https://roave.com/themes/ruby-on-roave/images/splash.jpg);
+    background-size: 1920px auto;
+    background-position: center -315px;
+    transition: all 0.25s;
+    text-align: center;
+    color: #FFF;
+}
+@media (max-width: 1440px) {
+    #banner-roave-is {
+    background-size: 1440px auto;
+    background-position: center -215px;
+    }
+}
+@media (max-width: 960px) {
+    #banner-roave-is {
+    background-size: 960px auto;
+    background-position: center -115px;
+    }
+}
+@media (max-width: 480px) {
+    #banner-roave-is {
+    background-size: 480px auto;
+    background-position: center;
+    }
+}
+
+
+/**
+ * Footer
+ */
+footer {
+    background-color: #1d1d28;
+    color: #FFF;
+}
+footer section {
+    float: left;
+    background-color: #1d1d28;
+    max-width: 28%;
+    margin-right: 5%;
+}
+
+@media screen and (max-width : 760px){
+    footer section {
+        float: none;
+        max-width: 100%;
+    }
+}
