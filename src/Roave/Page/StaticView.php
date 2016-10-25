@@ -6,7 +6,6 @@ use Psr\Http\Message\ServerRequestInterface;
 use Zend\Expressive\Template\TemplateRendererInterface;
 use Zend\Expressive\Router\RouteResult;
 use Zend\Diactoros\Response\HtmlResponse;
-use Roave\Data\ConfigDataMiddleware;
 
 class StaticView
 {

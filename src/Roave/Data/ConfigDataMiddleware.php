@@ -4,7 +4,6 @@ namespace Roave\Data;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Expressive\Router\RouteResult;
-use Zend\Diactoros\Response\HtmlResponse;
 
 class ConfigDataMiddleware
 {
