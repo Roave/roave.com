@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Roave</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#777777">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <img src="https://roave.com/themes/ruby-on-roave/images/roave-logo-tiny.svg">
+
+        <input type="checkbox" id="show-menu" role="button" aria-label="Toggle Menu" autocomplete="off">
+
+        <label for="show-menu" class="show-menu">
+            <s class="bar"></s>
+            <s class="bar"></s>
+            <s class="bar"></s>
+        </label>
+
+        <ul>
+            <li><a href="<?= $this->url('home'); ?>">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="<?= $this->url('team'); ?>">Our Team</a></li>
+            <li><a href="<?= $this->url('labs'); ?>">Labs</a></li>
+            <li><a href="<?= $this->url('talks'); ?>">Events &amp; Talks</a></li>
+            <li><a href="#">Blog(s)</a></li>
+        </ul>
+    </nav>
+
+
+    <?php echo $this->content ?>
+
+
+    <footer>
+        <section>
+            <h3>About Roave</h3>
+            <p>Roave is a full-service web development and consulting firm, specializing in PHP and Zend Framework.</p>
+
+            <p>Roave enables organizations to have access to the high caliber talent they need, when they need it.</p>
+
+            <p>Each team member at Roave is hand-picked for their considerable experience, expertise, and proven record of success, both professionally, and in the open source community.</p>
+        </section>
+
+        <section>
+            <h3>Inquiries</h3>
+            <p>Roave is currently accepting new clients.</p>
+
+            <p>If you are interested in inquiring about our services, please contact us.</p>
+        </section>
+
+        <section>
+            <h3>Contact</h3>
+
+            <dl>
+                <dt>Phone</dt>
+                <dd><a href="tel:1855557623">1-855-55-ROAVE</a></dd>
+            </dl>
+
+            <dl>
+                <dt>Email</dt>
+                <dd><a href="mailto:team@roave.com">team@roave.com</a></dd>
+            </dl>
+
+            <dl>
+                <dt>Twitter</dt>
+                <dd><a href="https://twitter.com/RoaveTeam">@RoaveTeam</a></dd>
+            </dl>
+        </section>
+
+        <hr style="clear: both;">
+        &copy; Roave 2016
+
+
+    </footer>
+
+</body>
+</html>
