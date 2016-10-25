@@ -93,6 +93,10 @@ $talks['defensive-php'] = [
             'name'   => 'PHPKonf Instanbul PHP Conference 2016',
             'joindin' => 'f62c4',
         ],
+        [
+            'name'   => 'PHPSW: Coding Practices 2015',
+            'joindin' => '8d81c',
+        ],
     ],
 ];
 $talks['defensive-php']['abstract'] = <<<str
@@ -101,6 +105,8 @@ $talks['defensive-php']['abstract'] = <<<str
     <p>There are a thousand ways to break your code, and a lot of ways to prevent that from happening.</p>
 
     <p>Let's explore defensive programming and learn how to protect our code from invalid usage.</p>
+
+<iframe width="300" height="169" src="https://www.youtube-nocookie.com/embed/rzGeNYC3oz0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 str;
 
 
@@ -246,6 +252,8 @@ $talks['nginx-speed'] = [
 ];
 $talks['nginx-speed']['abstract'] = <<<str
     <p>Nginx is a lightweight, high-performance web server which has been steadily rising in popularity and is used by many of the top websites on the internet. In this session, Evan will cover everything you need to know to get the most out of running your PHP site on Nginx, including PHP-FPM tuning, configuration best practices, common mistakes, tips and tricks--all backed by years of real-world experience running extremely high-traffic web services on Nginx.</p>
+
+<iframe width="300" height="169" src="https://www.youtube-nocookie.com/embed/j1KApO0BXRA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 str;
 
 $talks['zf2-modules'] = [
@@ -273,6 +281,8 @@ $talks['zf2-modules'] = [
 ];
 $talks['zf2-modules']['abstract'] = <<<str
     <p>One of the highly anticipated new features of Zend Framework 2 is the introduction of an all new and powerful approach to modules. This new module system has been designed with flexibility, simplicity, performance, and re-usability in mind. Modules in ZF2 can contain just about anything: PHP code, including MVC functionality; library code; view scripts; and/or public assets such as images, CSS, and JavaScript. With compelling features such native, best-in-class Phar packaging support and event-driven design, the possibilities are truly endless. Join Evan Coury, the author of the new ZF2 module system, as he explains everything ZF2 modules have to offer.</p>
+
+<iframe width="300" height="169" src="https://www.youtube-nocookie.com/embed/yu1e3KDFqk8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 str;
 
 return [
