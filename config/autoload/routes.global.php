@@ -1,5 +1,6 @@
 <?php
 use Roave\Page;
+use Roave\Data;
 use Zend\Expressive\Router;
 
 return [
@@ -8,10 +9,8 @@ return [
             Router\RouterInterface::class => Router\FastRouteRouter::class,
         ],
         'factories' => [
-            Page\Home::class  => Page\HomeFactory::class,
-            Page\Team::class  => Page\TeamFactory::class,
-            Page\Talks::class => Page\TalksFactory::class,
-            Page\Labs::class  => Page\LabsFactory::class,
+            Page\StaticView::class => Page\StaticViewFactory::class,
+            Data\ConfigDataMiddleware::class => Data\ConfigDataMiddlewareFactory::class,
         ],
     ],
 
@@ -19,28 +18,35 @@ return [
         [
             'name' => 'home',
             'path' => '/',
-            'middleware' => Page\Home::class,
+            'middleware' => Page\StaticView::class,
             'allowed_methods' => ['GET'],
         ],
 
         [
             'name' => 'team',
             'path' => '/team',
-            'middleware' => Page\Team::class,
+            'middleware' => [Data\ConfigDataMiddleware::class, Page\StaticView::class],
             'allowed_methods' => ['GET'],
         ],
 
         [
             'name' => 'talks',
             'path' => '/talks',
-            'middleware' => Page\Talks::class,
+            'middleware' => [Data\ConfigDataMiddleware::class, Page\StaticView::class],
             'allowed_methods' => ['GET'],
         ],
 
         [
             'name' => 'labs',
             'path' => '/labs',
-            'middleware' => Page\Labs::class,
+            'middleware' => Page\StaticView::class,
+            'allowed_methods' => ['GET'],
+        ],
+
+        [
+            'name' => 'services',
+            'path' => '/services',
+            'middleware' => Page\StaticView::class,
             'allowed_methods' => ['GET'],
         ],
     ],

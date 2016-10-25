@@ -4,7 +4,7 @@ namespace Roave\Page;
 use Interop\Container\ContainerInterface;
 use Zend\Expressive\Template\TemplateRendererInterface;
 
-class TeamFactory
+class StaticViewFactory
 {
     public function __invoke(ContainerInterface $container)
     {
@@ -12,6 +12,6 @@ class TeamFactory
             ? $container->get(TemplateRendererInterface::class)
             : null;
 
-        return new Team($template);
+        return new StaticView($template);
     }
 }

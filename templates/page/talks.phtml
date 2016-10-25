@@ -1,73 +1,25 @@
     <section id="talks">
         <h1>Talks &amp; Events</h1>
 
-        <article>
-            <h3>Event Sourcing: The good, the bad and the complicated</h3>
+        <?php foreach($this->talks as $talk): ?>
 
-            <p>By Marco Pivetta</p>
+        <article>
+            <h3><?= $talk->title ?></h3>
+
+            <p>By <?= $talk->presenter ?></p>
 
             <img src="https://joind.in/img/avg-rating-5.png">
 
-            <p>Event Sourcing can look like an attractive solution for any of your applications, but does it actually pay off?</p>
-
-            <p>What if it is all just buzzwords and no gain?</p>
-
-            <p>We’ll look at how we implemented event sourcing in our own app, code-reviews.io:</p>
+            <?= $talk->abstract ?>
 
             <ul>
-                <li>what made us fast</li>
-                <li>What made us super slow</li>
-                <li>What made us cry</li>
-            </ul>
-
-            <p>This talk will give you a good idea of what kind of challenges you will encounter when approaching event sourcing for the first time.</p>
-
-            <ul>
-                <li><a href="https://joind.in/e33ae">WebCamp Zagreb 2016</a> (Upcoming 28-Oct-2016)</li>
-                <li><a href="https://joind.in/67533">ZendCon 2016</a></li>
-                <li><a href="https://joind.in/41438">Dutch PHP Conference 2016</a></li>
-                <li><a href="https://joind.in/4df55">PHPUGFFM III/2016 </a></li>
+                <?php foreach($talk->events as $event): ?>
+                <li><a href="https://joind.in/<?= $event->joindin ?>"><?= $event->name ?></a></li>
+                <?php endforeach ?>
             </ul>
 
         </article>
 
-
-        <article>
-            <h3>Extremely Defensive PHP Programming</h3>
-
-            <p>By Marco Pivetta</p>
-
-            <img src="https://joind.in/img/avg-rating-5.png">
-
-            <p>Resistant, highly testable, safe and maintainable code... or not?</p>
-
-            <p>There are a thousand ways to break your code, and a lot of ways to prevent that from happening.</p>
-
-            <p>Let's explore defensive programming and learn how to protect our code from invalid usage.</p>
-
-            <ul>
-                <li><a href="https://joind.in/96b93">ZendCon 2016 </a></li>
-                <li><a href="https://joind.in/ee2bb">Dutch PHP Conference 2016 </a></li>
-                <li><a href="https://joind.in/77f23">PHP South Coast Conference 2016 </a></li>
-                <li><a href="https://joind.in/f62c4">PHPKonf Istanbul PHP Conference 2016 </a></li>
-            </ul>
-
-        </article>
-
-        <article>
-            <h3>Bringing modern PHP development to IBM i</h3>
-
-            <p>By James Titcumb</p>
-
-            <img src="https://joind.in/img/avg-rating-5.png">
-
-            <p>Zend Server for IBM i has done a great job at allowing enterprise PHP applications to run smoothly on the IBM i platform. But what about developing for the platform? Having recently been hired for a PHP project on IBM i, we wanted to ensure the project was using the best practices possible. This involved embarking on a whole new collaborative journey - uniting expert platform knowledge with bleeding-edge modern PHP development practices. We'll show you the process our team went through on the project to revolutionize the client's development process by introducing database abstraction, unit tests, functional tests, continuous integration, automated deployment, and more.</p>
-
-            <ul>
-                <li><a href="https://joind.in/e425e">ZendCon 2016 </a></li>
-            </ul>
-
-        </article>
-
+        <?php endforeach ?>
 
     </section>
