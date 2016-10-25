@@ -1,6 +1,8 @@
+<?php $this->headTitle('Talks &amp; Events') ?>
     <section id="talks">
         <h1>Talks &amp; Events</h1>
 
+        <div class="columns">
         <?php foreach($this->talks as $talk): ?>
 
         <article>
@@ -14,12 +16,13 @@
 
             <ul>
                 <?php foreach($talk->events as $event): ?>
-                <li><a href="https://joind.in/<?= $event->joindin ?>"><?= $event->name ?></a></li>
+                <li><a href="https://joind.in/talk/<?= $event->joindin ?>"><?= $event->name ?></a></li>
                 <?php endforeach ?>
             </ul>
 
         </article>
 
         <?php endforeach ?>
+        </div>
 
     </section>

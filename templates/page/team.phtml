@@ -1,3 +1,4 @@
+<?php $this->headTitle('Meet the Team') ?>
 <div class="content">
 <section id="team">
     <h1>Our Team</h1>
@@ -5,12 +6,15 @@
     <?php foreach ($this->team as $roaver): ?>
 
     <article class="team-member">
-        <img src="//www.gravatar.com/avatar/<?=$roaver->gravatar ?>?s=150&d=mm&r=g">
-        <h3><?= $roaver->name ?></h3>
-        <p><?= $roaver->bio ?></p>
+        <div class="wrapper">
+            <img src="//www.gravatar.com/avatar/<?=$roaver->gravatar ?>?s=150&d=mm&r=g">
+            <h5><?= $roaver->name ?></h5>
+            <p><?//= $roaver->bio ?></p>
+        </div>
     </article>
 
     <?php endforeach ?>
+    <div style="clear:both;"> </div>
 
 </section>
 </div>

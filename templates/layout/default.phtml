@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Roave</title>
+    <?= $this->headTitle('Roave')->setSeparator(' - ')->setAutoEscape(false) ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#777777">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato">
@@ -26,13 +26,13 @@
             <li><a href="<?= $this->url('services') ?>">Services</a></li>
             <li><a href="<?= $this->url('team') ?>">Our Team</a></li>
             <li><a href="<?= $this->url('labs') ?>">Labs</a></li>
-            <li><a href="<?= $this->url('talks') ?>">Events &amp; Talks</a></li>
+            <li><a href="<?= $this->url('talks') ?>">Talks &amp; Events</a></li>
             <li><a href="#">Blog(s)</a></li>
         </ul>
     </nav>
 
 
-    <?php echo $this->content ?>
+    <?= $this->content ?>
 
 
     <footer>
